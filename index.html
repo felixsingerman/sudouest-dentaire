@@ -88,13 +88,14 @@
 </head>
 <body>
 
-  <!-- Preloader -->
+  <!-- Preloader (only on first visit per session) -->
   <div id="preloader" aria-hidden="true">
     <div class="preloader-inner">
       <div class="preloader-wordmark">SO</div>
       <div class="preloader-bar"><div class="preloader-fill"></div></div>
     </div>
   </div>
+  <script>if(sessionStorage.getItem('preloaderShown')){document.getElementById('preloader').remove();}else{sessionStorage.setItem('preloaderShown','1');}</script>
 
   <!-- Skip to content -->
   <a href="#services" class="skip-link">Skip to content</a>
