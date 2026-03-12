@@ -46,27 +46,30 @@ const Navigation = (() => {
       });
     });
 
+    // Each feature is wrapped individually so one crash never kills the rest
+    const safeCall = (fn) => { try { fn(); } catch (e) { console.warn('Feature init failed:', e); } };
+
     // Desktop-only features
     if (!reducedMotion && window.matchMedia('(hover: hover)').matches) {
-      initCursorGlow();
-      initMagneticButtons();
-      initCustomCursor();
-      init3DTilt();
+      safeCall(initCursorGlow);
+      safeCall(initMagneticButtons);
+      safeCall(initCustomCursor);
+      safeCall(init3DTilt);
     }
 
-    if (!reducedMotion) createParticles();
+    if (!reducedMotion) safeCall(createParticles);
 
     // Interactive features
-    initStatsCounter();
-    initBeforeAfterSlider();
-    initTestimonials();
-    initFAQ();
-    initPageTransitions();
-    initPreloader();
-    initCookieConsent();
-    initFormToast();
-    initActiveNavHighlight();
-    if (!reducedMotion) initTypingEffect();
+    safeCall(initStatsCounter);
+    safeCall(initBeforeAfterSlider);
+    safeCall(initTestimonials);
+    safeCall(initFAQ);
+    safeCall(initPageTransitions);
+    safeCall(initPreloader);
+    safeCall(initCookieConsent);
+    safeCall(initFormToast);
+    safeCall(initActiveNavHighlight);
+    if (!reducedMotion) safeCall(initTypingEffect);
 
     // Scroll listener
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -236,17 +239,18 @@ const Navigation = (() => {
     const els = document.querySelectorAll('.stat-number[data-count]');
     if (!els.length) return;
     const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target, parseInt(e.target.dataset.count, 10)); obs.unobserve(e.target); }});
-    }, { threshold: 0.5 });
+      entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target, parseInt(e.target.dataset.count, 10), e.target.dataset.suffix || ''); obs.unobserve(e.target); }});
+    }, { threshold: 0.2 });
     els.forEach(el => obs.observe(el));
   }
 
-  function animateCount(el, target) {
-    if (reducedMotion) { el.textContent = formatNumber(target); return; }
+  function animateCount(el, target, suffix) {
+    if (reducedMotion) { el.textContent = formatNumber(target) + suffix; return; }
     const dur = 2000, start = performance.now();
     function update(now) {
       const p = Math.min((now - start) / dur, 1);
-      el.textContent = formatNumber(Math.round((1 - Math.pow(1 - p, 3)) * target));
+      const current = Math.round((1 - Math.pow(1 - p, 3)) * target);
+      el.textContent = formatNumber(current) + (p >= 1 ? suffix : '');
       if (p < 1) requestAnimationFrame(update);
     }
     requestAnimationFrame(update);
