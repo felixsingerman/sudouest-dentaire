@@ -97,28 +97,19 @@ const Navigation = (() => {
     const preloader = document.getElementById('preloader');
     if (!preloader) return;
 
-    function hidePreloader() {
-      setTimeout(() => {
-        preloader.classList.add('is-hidden');
-        setTimeout(() => preloader.remove(), 600);
-      }, 600);
+    let hidden = false;
+    function hide() {
+      if (hidden) return;
+      hidden = true;
+      preloader.classList.add('is-hidden');
+      setTimeout(() => { if (preloader.parentNode) preloader.remove(); }, 700);
     }
 
-    // If the page already finished loading (race condition with DOMContentLoaded),
-    // hide immediately. Otherwise wait for the load event.
-    if (document.readyState === 'complete') {
-      hidePreloader();
-    } else {
-      window.addEventListener('load', hidePreloader);
-    }
+    // Hide after fill animation (1.8s) + small buffer
+    setTimeout(hide, 2200);
 
-    // Safety net: hide preloader after 4s no matter what
-    setTimeout(() => {
-      if (preloader.parentNode) {
-        preloader.classList.add('is-hidden');
-        setTimeout(() => { if (preloader.parentNode) preloader.remove(); }, 600);
-      }
-    }, 4000);
+    // Hard safety net — never stay longer than 3s
+    setTimeout(hide, 3000);
   }
 
   /* ===== CUSTOM CURSOR ===== */
@@ -138,17 +129,23 @@ const Navigation = (() => {
       mouseY = e.clientY;
       dot.style.left = mouseX + 'px';
       dot.style.top = mouseY + 'px';
-      if (!active) { active = true; animateCursor(); }
+      if (!active) {
+        active = true;
+        cursor.classList.add('is-active');
+        ringX = mouseX;
+        ringY = mouseY;
+        animateCursor();
+      }
     });
 
     document.addEventListener('mouseleave', () => {
       active = false;
-      cursor.style.opacity = '0';
+      cursor.classList.remove('is-active');
       if (rafId) cancelAnimationFrame(rafId);
     });
 
     document.addEventListener('mouseenter', () => {
-      cursor.style.opacity = '1';
+      cursor.classList.add('is-active');
     });
 
     function animateCursor() {

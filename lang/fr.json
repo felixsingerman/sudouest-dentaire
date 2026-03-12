@@ -218,6 +218,15 @@
 
   "testimonials.google_rating": "4.8 sur Google · 303 avis",
 
+  "marquee.item1": "Examen & Nettoyage",
+  "marquee.item2": "Radiographies",
+  "marquee.item3": "Invisalign",
+  "marquee.item4": "Implants",
+  "marquee.item5": "Blanchiment",
+  "marquee.item6": "Facettes",
+  "marquee.item7": "Couronnes",
+  "marquee.item8": "Obturations",
+
   "cookies.banner_text": "Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href=\"cookies.html\">politique relative aux cookies</a>.",
   "cookies.accept": "Accepter",
   "cookies.decline": "Refuser",

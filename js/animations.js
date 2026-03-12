@@ -1,7 +1,10 @@
 const Animations = (() => {
   function init() {
+    // Add js-animated to html — this enables the hidden start states in CSS.
+    // Without this class, all content stays visible (safe fallback).
+    document.documentElement.classList.add('js-animated');
+
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      // Make everything visible immediately
       document.querySelectorAll('[data-animate]').forEach(el => {
         el.classList.add('is-visible');
       });
@@ -16,7 +19,7 @@ const Animations = (() => {
         }
       });
     }, {
-      threshold: 0.15
+      threshold: 0.1
     });
 
     document.querySelectorAll('[data-animate]').forEach(el => {

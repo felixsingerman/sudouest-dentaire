@@ -1,55 +1,63 @@
-/* Scroll reveal base states */
+/* =============================================
+   SCROLL REVEAL ANIMATIONS
 
-.fade-up {
+   Content is VISIBLE by default. JavaScript adds
+   the .js-animated class to html, which enables
+   the hidden start states. This guarantees content
+   is never invisible if JS fails.
+   ============================================= */
+
+/* Only hide elements when JS is confirmed working */
+.js-animated .fade-up {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity var(--transition-slow), transform var(--transition-slow);
 }
 
-.fade-up.is-visible {
+.js-animated .fade-up.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.fade-in {
+.js-animated .fade-in {
   opacity: 0;
   transition: opacity var(--transition-slow);
 }
 
-.fade-in.is-visible {
+.js-animated .fade-in.is-visible {
   opacity: 1;
 }
 
-.slide-left {
+.js-animated .slide-left {
   opacity: 0;
   transform: translateX(-50px);
   transition: opacity var(--transition-slow), transform var(--transition-slow);
 }
 
-.slide-left.is-visible {
+.js-animated .slide-left.is-visible {
   opacity: 1;
   transform: translateX(0);
 }
 
-.slide-right {
+.js-animated .slide-right {
   opacity: 0;
   transform: translateX(50px);
   transition: opacity var(--transition-slow), transform var(--transition-slow);
 }
 
-.slide-right.is-visible {
+.js-animated .slide-right.is-visible {
   opacity: 1;
   transform: translateX(0);
 }
 
 /* Scale reveal for images */
-.scale-in {
+.js-animated .scale-in {
   opacity: 0;
   transform: scale(0.92);
   transition: opacity var(--transition-slow), transform var(--transition-slow);
 }
 
-.scale-in.is-visible {
+.js-animated .scale-in.is-visible {
   opacity: 1;
   transform: scale(1);
 }
@@ -356,6 +364,11 @@
     width: 100% !important;
     white-space: normal !important;
     border-right: none !important;
+    animation: none !important;
+  }
+
+  .hero-anim {
+    opacity: 1 !important;
     animation: none !important;
   }
 }
