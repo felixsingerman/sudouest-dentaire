@@ -28,5 +28,11 @@
         { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!assets|css|js|lang|.*\\.html|.*\\.json|.*\\.xml|.*\\.txt|.*\\.svg).*)",
+      "destination": "/404.html"
+    }
   ]
 }

@@ -196,5 +196,33 @@
   "cookies.manage_desc": "Vous pouvez modifier vos préférences en matière de cookies à tout moment. De plus, la plupart des navigateurs web vous permettent de contrôler les cookies via leurs paramètres. Voici comment gérer les cookies dans les principaux navigateurs :",
   "cookies.contact_title": "Questions ?",
   "cookies.contact_desc": "Si vous avez des questions concernant notre utilisation des cookies, n'hésitez pas à nous contacter :",
-  "cookies.also_see": "Consultez également notre <a href=\"confidentialite.html\">Politique de confidentialité</a> pour en savoir plus sur la protection de vos données personnelles."
+  "cookies.also_see": "Consultez également notre <a href=\"confidentialite.html\">Politique de confidentialité</a> pour en savoir plus sur la protection de vos données personnelles.",
+
+  "why.eyebrow": "POURQUOI NOUS CHOISIR",
+  "why.title": "L'excellence à votre service",
+  "why.feature1_title": "Équipement Moderne",
+  "why.feature1_desc": "Technologie numérique de pointe pour des diagnostics précis et des traitements optimaux.",
+  "why.feature2_title": "Équipe Bilingue",
+  "why.feature2_desc": "Service chaleureux en français et en anglais pour votre confort.",
+  "why.feature3_title": "Urgences le Jour Même",
+  "why.feature3_desc": "Plages horaires réservées chaque jour pour les urgences dentaires.",
+
+  "journey.eyebrow": "VOTRE PARCOURS",
+  "journey.title": "Simple comme 1, 2, 3",
+  "journey.step1_title": "Réservez",
+  "journey.step1_desc": "Prenez rendez-vous en ligne ou par téléphone en quelques secondes.",
+  "journey.step2_title": "Visitez",
+  "journey.step2_desc": "Profitez d'un accueil chaleureux et de soins personnalisés.",
+  "journey.step3_title": "Souriez",
+  "journey.step3_desc": "Repartez avec un sourire éclatant et la confiance retrouvée.",
+
+  "testimonials.google_rating": "4.9 sur Google",
+
+  "cookies.banner_text": "Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href=\"cookies.html\">politique relative aux cookies</a>.",
+  "cookies.accept": "Accepter",
+  "cookies.decline": "Refuser",
+
+  "404.title": "Page introuvable",
+  "404.subtitle": "La page que vous cherchez n'existe pas ou a été déplacée.",
+  "404.back": "Retour à l'accueil"
 }

@@ -1,0 +1,10 @@
+{
+  "name": "Clinique Dentaire Sud Ouest",
+  "short_name": "Sud Ouest",
+  "description": "Soins dentaires généraux et cosmétiques à Côte-Saint-Paul / Ville-Émard, Montréal.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0c0c0c",
+  "background_color": "#0c0c0c",
+  "icons": []
+}

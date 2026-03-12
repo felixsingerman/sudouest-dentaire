@@ -12,8 +12,12 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sudouestdentaire.com">
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="og:image" content="https://sudouestdentaire.com/assets/images/og-image.jpg">
-  <meta name="twitter:image" content="https://sudouestdentaire.com/assets/images/og-image.jpg">
+  <meta property="og:image" content="https://sudouestdentaire.com/assets/images/og-image.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://sudouestdentaire.com/assets/images/og-image.svg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0c0c0c">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,6 +70,14 @@
 </head>
 <body>
 
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-wordmark">SO</div>
+      <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+    </div>
+  </div>
+
   <!-- Skip to content -->
   <a href="#services" class="skip-link">Skip to content</a>
 
@@ -77,6 +89,12 @@
 
   <!-- Cursor Glow (desktop) -->
   <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
 
   <!-- ==================== NAVIGATION ==================== -->
   <nav class="nav" aria-label="Main navigation">
@@ -155,6 +173,44 @@
     </div>
   </section>
 
+  <!-- Marquee Ticker -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">Examen & Nettoyage</span>
+      <span class="marquee-separator">✦</span>
+      <span class="marquee-item">Radiographies</span>
+      <span class="marquee-separator">✦</span>
+      <span class="marquee-item">Invisalign</span>
+      <span class="marquee-separator">✦</span>
+      <span class="marquee-item">Implants</span>
+      <span class="marquee-separator">✦</span>
+      <span class="marquee-item">Blanchiment</span>
+      <span class="marquee-separator">✦</span>
+      <span class="marquee-item">Facettes</span>
+      <span class="marquee-separator">✦</span>
+      <span class="marquee-item">Couronnes</span>
+      <span class="marquee-separator">✦</span>
+      <span class="marquee-item">Obturations</span>
+      <span class="marquee-separator">✦</span>
+      <span class="marquee-item">Examen & Nettoyage</span>
+      <span class="marquee-separator">✦</span>
+      <span class="marquee-item">Radiographies</span>
+      <span class="marquee-separator">✦</span>
+      <span class="marquee-item">Invisalign</span>
+      <span class="marquee-separator">✦</span>
+      <span class="marquee-item">Implants</span>
+      <span class="marquee-separator">✦</span>
+      <span class="marquee-item">Blanchiment</span>
+      <span class="marquee-separator">✦</span>
+      <span class="marquee-item">Facettes</span>
+      <span class="marquee-separator">✦</span>
+      <span class="marquee-item">Couronnes</span>
+      <span class="marquee-separator">✦</span>
+      <span class="marquee-item">Obturations</span>
+      <span class="marquee-separator">✦</span>
+    </div>
+  </div>
+
   <main>
 
   <!-- ==================== STATS COUNTER ==================== -->
@@ -196,6 +252,68 @@
           <p data-i18n="sameday.desc">Nous comprenons que les urgences n'attendent pas. Contactez-nous pour un rendez-vous rapide.</p>
         </div>
         <a href="tel:5147672254" class="btn-primary magnetic" data-i18n="sameday.cta">Appelez maintenant</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHY CHOOSE US ==================== -->
+  <section class="section section-why">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: var(--space-2xl);">
+        <p class="section-eyebrow fade-up" data-animate data-i18n="why.eyebrow">POURQUOI NOUS CHOISIR</p>
+        <h2 class="section-title heading-reveal fade-up" data-animate style="--i: 1" data-i18n="why.title">L'excellence à votre service</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card fade-up" data-animate style="--i: 0">
+          <div class="why-icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 data-i18n="why.feature1_title">Équipement Moderne</h3>
+          <p data-i18n="why.feature1_desc">Technologie numérique de pointe pour des diagnostics précis et des traitements optimaux.</p>
+        </div>
+        <div class="why-card fade-up" data-animate style="--i: 1">
+          <div class="why-icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01"/><path d="M12 10h.01"/><path d="M16 10h.01"/></svg>
+          </div>
+          <h3 data-i18n="why.feature2_title">Équipe Bilingue</h3>
+          <p data-i18n="why.feature2_desc">Service chaleureux en français et en anglais pour votre confort.</p>
+        </div>
+        <div class="why-card fade-up" data-animate style="--i: 2">
+          <div class="why-icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 data-i18n="why.feature3_title">Urgences le Jour Même</h3>
+          <p data-i18n="why.feature3_desc">Plages horaires réservées chaque jour pour les urgences dentaires.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PATIENT JOURNEY ==================== -->
+  <section class="section section-journey">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: var(--space-2xl);">
+        <p class="section-eyebrow fade-up" data-animate data-i18n="journey.eyebrow">VOTRE PARCOURS</p>
+        <h2 class="section-title heading-reveal fade-up" data-animate style="--i: 1" data-i18n="journey.title">Simple comme 1, 2, 3</h2>
+      </div>
+      <div class="journey-steps">
+        <div class="journey-step fade-up" data-animate style="--i: 0">
+          <div class="journey-number">1</div>
+          <h3 data-i18n="journey.step1_title">Réservez</h3>
+          <p data-i18n="journey.step1_desc">Prenez rendez-vous en ligne ou par téléphone en quelques secondes.</p>
+        </div>
+        <div class="journey-connector" aria-hidden="true"></div>
+        <div class="journey-step fade-up" data-animate style="--i: 1">
+          <div class="journey-number">2</div>
+          <h3 data-i18n="journey.step2_title">Visitez</h3>
+          <p data-i18n="journey.step2_desc">Profitez d'un accueil chaleureux et de soins personnalisés.</p>
+        </div>
+        <div class="journey-connector" aria-hidden="true"></div>
+        <div class="journey-step fade-up" data-animate style="--i: 2">
+          <div class="journey-number">3</div>
+          <h3 data-i18n="journey.step3_title">Souriez</h3>
+          <p data-i18n="journey.step3_desc">Repartez avec un sourire éclatant et la confiance retrouvée.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -373,6 +491,13 @@
           <button class="testimonial-dot" aria-label="Témoignage 2"></button>
           <button class="testimonial-dot" aria-label="Témoignage 3"></button>
         </div>
+        <div class="google-review-badge fade-up" data-animate>
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          <div class="google-review-info">
+            <div class="google-review-stars">★★★★★</div>
+            <span class="google-review-text" data-i18n="testimonials.google_rating">4.9 sur Google</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -520,11 +645,12 @@
         <!-- Map -->
         <div class="contact-map fade-up" data-animate>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.8!2d-73.590!3d45.462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a3c0b3b3b3b%3A0x0!2s1825+Avenue+de+l'%C3%89glise%2C+Montr%C3%A9al!5e0!3m2!1sfr!2sca!4v1234567890"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=1825+Avenue+de+l'Église,+Montréal,+QC+H4E+1G9&zoom=16&maptype=roadmap"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Clinique Dentaire Sud Ouest - Google Maps">
+            title="Clinique Dentaire Sud Ouest - Google Maps"
+            style="filter: grayscale(0.6) contrast(1.1); transition: filter 0.4s ease;"
           </iframe>
         </div>
 
@@ -662,10 +788,26 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
+  <!-- Sticky Mobile CTA -->
+  <div class="sticky-mobile-cta" id="sticky-cta">
+    <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="nav.booking" data-i18n-href="booking.url">PRENDRE RENDEZ-VOUS</a>
+  </div>
+
   <!-- Scripts -->
   <script src="js/i18n.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent">
+    <div class="cookie-banner-inner">
+      <p data-i18n="cookies.banner_text">Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href="cookies.html">politique relative aux cookies</a>.</p>
+      <div class="cookie-banner-actions">
+        <button class="cookie-btn cookie-btn-accept" id="cookie-accept" data-i18n="cookies.accept">Accepter</button>
+        <button class="cookie-btn cookie-btn-decline" id="cookie-decline" data-i18n="cookies.decline">Refuser</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

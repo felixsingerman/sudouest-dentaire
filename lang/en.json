@@ -196,5 +196,33 @@
   "cookies.manage_desc": "You can change your cookie preferences at any time. Additionally, most web browsers allow you to control cookies through their settings. Here's how to manage cookies in the main browsers:",
   "cookies.contact_title": "Questions?",
   "cookies.contact_desc": "If you have any questions about our use of cookies, please don't hesitate to contact us:",
-  "cookies.also_see": "Also see our <a href=\"confidentialite.html\">Privacy Policy</a> to learn more about the protection of your personal data."
+  "cookies.also_see": "Also see our <a href=\"confidentialite.html\">Privacy Policy</a> to learn more about the protection of your personal data.",
+
+  "why.eyebrow": "WHY CHOOSE US",
+  "why.title": "Excellence at your service",
+  "why.feature1_title": "Modern Equipment",
+  "why.feature1_desc": "State-of-the-art digital technology for precise diagnostics and optimal treatments.",
+  "why.feature2_title": "Bilingual Team",
+  "why.feature2_desc": "Warm service in French and English for your comfort.",
+  "why.feature3_title": "Same-Day Emergencies",
+  "why.feature3_desc": "Time slots reserved every day for dental emergencies.",
+
+  "journey.eyebrow": "YOUR JOURNEY",
+  "journey.title": "As easy as 1, 2, 3",
+  "journey.step1_title": "Book",
+  "journey.step1_desc": "Schedule your appointment online or by phone in seconds.",
+  "journey.step2_title": "Visit",
+  "journey.step2_desc": "Enjoy a warm welcome and personalized care.",
+  "journey.step3_title": "Smile",
+  "journey.step3_desc": "Leave with a radiant smile and renewed confidence.",
+
+  "testimonials.google_rating": "4.9 on Google",
+
+  "cookies.banner_text": "We use cookies to improve your experience. By continuing, you accept our <a href=\"cookies.html\">cookie policy</a>.",
+  "cookies.accept": "Accept",
+  "cookies.decline": "Decline",
+
+  "404.title": "Page not found",
+  "404.subtitle": "The page you're looking for doesn't exist or has been moved.",
+  "404.back": "Back to home"
 }
