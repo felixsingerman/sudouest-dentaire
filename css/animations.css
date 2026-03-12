@@ -351,4 +351,11 @@
   .page-transition {
     transition: none !important;
   }
+
+  .typing-effect {
+    width: 100% !important;
+    white-space: normal !important;
+    border-right: none !important;
+    animation: none !important;
+  }
 }

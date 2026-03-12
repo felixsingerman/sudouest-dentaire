@@ -2374,6 +2374,10 @@ a:focus:not(:focus-visible) {
   letter-spacing: 2px;
 }
 
+.google-review-stars .star-partial {
+  opacity: 0.4;
+}
+
 .google-review-text {
   font-size: 0.78rem;
   font-weight: 600;
@@ -2516,4 +2520,105 @@ a:focus:not(:focus-visible) {
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* =====================
+   TYPING EFFECT
+   ===================== */
+.typing-effect {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--gold);
+  width: 0;
+  max-width: none;
+}
+
+.typing-effect.is-typing {
+  animation: typing 2.8s steps(60, end) forwards, blink-caret 0.6s step-end 6;
+}
+
+.typing-effect.typing-done {
+  border-right: none;
+  white-space: normal;
+  width: 100%;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--gold); }
+}
+
+/* =====================
+   WHATSAPP FLOATING BUTTON
+   ===================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  z-index: 998;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+}
+
+/* =====================
+   SECTION COLOR TRANSITIONS
+   ===================== */
+.section {
+  transition: background-color 0.6s ease;
+}
+
+.section-general {
+  background-color: var(--ivory);
+}
+
+.section-cosmetic {
+  background-color: var(--cream);
+}
+
+.section-team,
+.section-faq {
+  background-color: var(--offwhite);
+}
+
+.section-testimonials {
+  background-color: var(--cream);
+}
+
+.section-why {
+  background-color: var(--offwhite);
+}
+
+.section-journey {
+  background-color: var(--ivory);
+}
+
+.section-insurance {
+  background-color: var(--cream);
+}
+
+.section-contact {
+  background-color: var(--offwhite);
 }

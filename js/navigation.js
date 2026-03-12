@@ -66,10 +66,30 @@ const Navigation = (() => {
     initCookieConsent();
     initFormToast();
     initActiveNavHighlight();
+    if (!reducedMotion) initTypingEffect();
 
     // Scroll listener
     window.addEventListener('scroll', onScroll, { passive: true });
     onScrollUpdate();
+  }
+
+  /* ===== TYPING EFFECT ===== */
+  function initTypingEffect() {
+    const el = document.querySelector('.typing-effect');
+    if (!el || window.innerWidth < 768) return;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          el.classList.add('is-typing');
+          el.addEventListener('animationend', () => {
+            el.classList.add('typing-done');
+            el.classList.remove('is-typing');
+          }, { once: true });
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    observer.observe(el);
   }
 
   /* ===== PRELOADER ===== */
