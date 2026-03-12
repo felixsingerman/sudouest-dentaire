@@ -2,9 +2,11 @@ const I18n = (() => {
   let currentLang = 'fr';
   const cache = {};
 
-  // Detect base path from this script's src attribute
-  const scriptEl = document.querySelector('script[src*="i18n.js"]');
-  const basePath = scriptEl ? scriptEl.src.replace(/js\/i18n\.js.*$/, '') : '';
+  // Detect if we're in a subdirectory (e.g., /services/ or /blog/)
+  const pathParts = window.location.pathname.split('/').filter(Boolean);
+  const fileName = pathParts[pathParts.length - 1] || '';
+  const isSubdir = pathParts.length > 1 && fileName.endsWith('.html');
+  const basePath = isSubdir ? '../' : '';
 
   function init() {
     const urlParams = new URLSearchParams(window.location.search);
