@@ -651,7 +651,10 @@ a:focus:not(:focus-visible) {
   font-size: 2.2rem;
   font-weight: 400;
   font-style: italic;
-  color: var(--text);
+  background: linear-gradient(135deg, var(--text) 0%, var(--text) 60%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: var(--space-md);
   line-height: 1.2;
 }
@@ -1108,23 +1111,27 @@ a:focus:not(:focus-visible) {
 }
 
 .form-group {
-  margin-bottom: var(--space-md);
+  position: relative;
+  margin-bottom: var(--space-lg);
 }
 
 .form-group label {
-  display: block;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 8px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  position: absolute;
+  left: 18px;
+  top: 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #b5b0a8;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+  transition: all 0.25s ease;
+  transform-origin: left;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 14px 18px;
+  padding: 20px 18px 10px;
   border: 1px solid var(--warm-gray);
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
@@ -1136,7 +1143,7 @@ a:focus:not(:focus-visible) {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #b5b0a8;
+  color: transparent;
 }
 
 .form-group input:focus,
@@ -1145,6 +1152,19 @@ a:focus:not(:focus-visible) {
   border-color: var(--gold);
   box-shadow: 0 0 0 3px var(--gold-muted);
   background: var(--white);
+}
+
+/* Float label up on focus or when filled */
+.form-group input:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:not(:placeholder-shown) ~ label {
+  top: 4px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .form-group textarea {
