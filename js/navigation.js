@@ -100,6 +100,13 @@ const Navigation = (() => {
     const preloader = document.getElementById('preloader');
     if (!preloader) return;
 
+    // Only show preloader on first visit per session
+    if (sessionStorage.getItem('preloaderShown')) {
+      preloader.remove();
+      return;
+    }
+    sessionStorage.setItem('preloaderShown', '1');
+
     let hidden = false;
     function hide() {
       if (hidden) return;
