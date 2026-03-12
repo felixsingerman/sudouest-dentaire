@@ -2,6 +2,10 @@ const I18n = (() => {
   let currentLang = 'fr';
   const cache = {};
 
+  // Detect base path from this script's src attribute
+  const scriptEl = document.querySelector('script[src*="i18n.js"]');
+  const basePath = scriptEl ? scriptEl.src.replace(/js\/i18n\.js.*$/, '') : '';
+
   function init() {
     const urlParams = new URLSearchParams(window.location.search);
     const urlLang = urlParams.get('lang');
@@ -42,7 +46,7 @@ const I18n = (() => {
   async function loadAndApply(lang) {
     try {
       if (!cache[lang]) {
-        const resp = await fetch(`lang/${lang}.json`);
+        const resp = await fetch(`${basePath}lang/${lang}.json`);
         if (!resp.ok) throw new Error(`Failed to load ${lang}.json`);
         cache[lang] = await resp.json();
       }
