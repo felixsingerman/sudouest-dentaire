@@ -1,21 +1,12 @@
-/* CSS-only fallback: if JS never adds .is-visible, content appears after 3s */
-@keyframes fallback-reveal {
-  to { opacity: 1; transform: none; }
-}
-
 /* Scroll reveal base states */
 
 .fade-up {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity var(--transition-slow), transform var(--transition-slow);
-  animation: fallback-reveal 0.8s ease forwards;
-  animation-delay: 1.5s;
 }
 
-/* Once JS works and adds is-visible, cancel the fallback animation */
 .fade-up.is-visible {
-  animation: none;
   opacity: 1;
   transform: translateY(0);
 }
@@ -23,12 +14,9 @@
 .fade-in {
   opacity: 0;
   transition: opacity var(--transition-slow);
-  animation: fallback-reveal 0.8s ease forwards;
-  animation-delay: 1.5s;
 }
 
 .fade-in.is-visible {
-  animation: none;
   opacity: 1;
 }
 
@@ -36,12 +24,9 @@
   opacity: 0;
   transform: translateX(-50px);
   transition: opacity var(--transition-slow), transform var(--transition-slow);
-  animation: fallback-reveal 0.8s ease forwards;
-  animation-delay: 1.5s;
 }
 
 .slide-left.is-visible {
-  animation: none;
   opacity: 1;
   transform: translateX(0);
 }
@@ -50,12 +35,9 @@
   opacity: 0;
   transform: translateX(50px);
   transition: opacity var(--transition-slow), transform var(--transition-slow);
-  animation: fallback-reveal 0.8s ease forwards;
-  animation-delay: 1.5s;
 }
 
 .slide-right.is-visible {
-  animation: none;
   opacity: 1;
   transform: translateX(0);
 }
@@ -65,12 +47,9 @@
   opacity: 0;
   transform: scale(0.92);
   transition: opacity var(--transition-slow), transform var(--transition-slow);
-  animation: fallback-reveal 0.8s ease forwards;
-  animation-delay: 1.5s;
 }
 
 .scale-in.is-visible {
-  animation: none;
   opacity: 1;
   transform: scale(1);
 }
