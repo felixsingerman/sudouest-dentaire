@@ -804,11 +804,30 @@
     <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="nav.booking" data-i18n-href="booking.url">PRENDRE RENDEZ-VOUS</a>
   </div>
 
+  <!-- No-JS fallback: make everything visible if JS is disabled or fails -->
+  <noscript>
+    <style>
+      .fade-up, .fade-in, .slide-left, .slide-right, .scale-in, .hero-anim,
+      [data-animate] { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
+
   <!-- Scripts -->
   <script src="js/i18n.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- Last-resort inline safety net -->
+  <script>
+    setTimeout(function() {
+      document.querySelectorAll('.fade-up, .fade-in, .slide-left, .slide-right, .scale-in, [data-animate]').forEach(function(el) {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+        el.classList.add('is-visible');
+      });
+    }, 1000);
+  </script>
 
   <!-- Cookie Consent Banner -->
   <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent">
