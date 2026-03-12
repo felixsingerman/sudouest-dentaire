@@ -49,14 +49,6 @@
 /* Cookie banner — stack on mobile */
 .cookie-banner-inner { flex-direction: column; }
 
-/* Typing effect — disable on mobile (wrapping breaks it) */
-.typing-effect {
-  white-space: normal;
-  width: 100%;
-  border-right: none;
-  overflow: visible;
-}
-
 /* WhatsApp — smaller on mobile */
 .whatsapp-float { width: 48px; height: 48px; bottom: 20px; left: 16px; }
 .whatsapp-float svg { width: 24px; height: 24px; }
@@ -125,21 +117,6 @@
 
   /* Custom cursor — show on desktop-capable devices */
   .custom-cursor { display: block; }
-
-  /* Typing effect — enable on desktop */
-  .typing-effect {
-    white-space: nowrap;
-    width: 0;
-    border-right: 2px solid var(--gold);
-    overflow: hidden;
-  }
-
-  .typing-effect.typing-done {
-    white-space: normal;
-    width: 100%;
-    border-right: none;
-    overflow: visible;
-  }
 
   /* WhatsApp — full size on desktop */
   .whatsapp-float { width: 56px; height: 56px; bottom: 24px; left: 24px; }

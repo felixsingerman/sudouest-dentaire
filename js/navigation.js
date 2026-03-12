@@ -96,12 +96,29 @@ const Navigation = (() => {
   function initPreloader() {
     const preloader = document.getElementById('preloader');
     if (!preloader) return;
-    window.addEventListener('load', () => {
+
+    function hidePreloader() {
       setTimeout(() => {
         preloader.classList.add('is-hidden');
         setTimeout(() => preloader.remove(), 600);
       }, 600);
-    });
+    }
+
+    // If the page already finished loading (race condition with DOMContentLoaded),
+    // hide immediately. Otherwise wait for the load event.
+    if (document.readyState === 'complete') {
+      hidePreloader();
+    } else {
+      window.addEventListener('load', hidePreloader);
+    }
+
+    // Safety net: hide preloader after 4s no matter what
+    setTimeout(() => {
+      if (preloader.parentNode) {
+        preloader.classList.add('is-hidden');
+        setTimeout(() => { if (preloader.parentNode) preloader.remove(); }, 600);
+      }
+    }, 4000);
   }
 
   /* ===== CUSTOM CURSOR ===== */
