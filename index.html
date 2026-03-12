@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinique Dentaire Sud Ouest | Dentiste à Montréal</title>
+  <meta name="description" content="Clinique Dentaire Sud Ouest — soins dentaires généraux et cosmétiques à Côte-Saint-Paul / Ville-Émard, Montréal. Prenez rendez-vous en ligne.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Clinique Dentaire Sud Ouest | Dentiste à Montréal">
+  <meta property="og:description" content="Soins dentaires d'exception dans un environnement chaleureux et moderne.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sudouestdentaire.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="https://sudouestdentaire.com/assets/images/og-image.jpg">
+  <meta name="twitter:image" content="https://sudouestdentaire.com/assets/images/og-image.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Clinique Dentaire Sud Ouest",
+    "alternateName": "Sud Ouest Dental Clinic",
+    "url": "https://sudouestdentaire.com",
+    "telephone": "+1-514-767-2254",
+    "email": "info@sudouestdentaire.ca",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1825 Avenue de l'Église",
+      "addressLocality": "Montréal",
+      "addressRegion": "QC",
+      "postalCode": "H4E 1G9",
+      "addressCountry": "CA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 45.4625,
+      "longitude": -73.5880
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/sudouestdentaire/",
+      "https://www.instagram.com/sudouest_dentaire/"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip to content -->
+  <a href="#services" class="skip-link">Skip to content</a>
+
+  <!-- Page transition overlay -->
+  <div class="page-transition" aria-hidden="true"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Cursor Glow (desktop) -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="lang-switcher">
+          <button class="lang-btn is-active" data-lang-switch="fr" aria-label="Français">FR</button>
+          <button class="lang-btn" data-lang-switch="en" aria-label="English">EN</button>
+        </div>
+        <a href="tel:5147672254" class="nav-phone">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-i18n="nav.phone">514 767 2254</span>
+        </a>
+      </div>
+
+      <a href="#hero" class="nav-wordmark">SUD OUEST</a>
+
+      <div class="nav-actions-desktop">
+        <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-booking magnetic" target="_blank" rel="noopener noreferrer" data-i18n="nav.booking" data-i18n-href="booking.url">PRENDRE RENDEZ-VOUS</a>
+      </div>
+
+      <div class="nav-actions-mobile">
+        <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-label="Menu">
+    <div class="mobile-nav-link"><a href="#hero" data-i18n="mobile.home">Accueil</a></div>
+    <div class="mobile-nav-link"><a href="#services" data-i18n="mobile.services">Services</a></div>
+    <div class="mobile-nav-link"><a href="#team" data-i18n="mobile.team">Équipe</a></div>
+    <div class="mobile-nav-link"><a href="#contact" data-i18n="mobile.contact">Contact</a></div>
+    <div class="mobile-nav-link">
+      <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-booking" target="_blank" rel="noopener noreferrer" data-i18n="mobile.booking" data-i18n-href="booking.url">Prendre rendez-vous</a>
+    </div>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" aria-hidden="true"></div>
+    <!-- Animated gradient orbs -->
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
+    <div class="hero-content" data-animate>
+      <p class="hero-eyebrow fade-up" data-animate data-i18n="hero.eyebrow">CLINIQUE DENTAIRE SUD OUEST</p>
+      <h1 class="hero-title fade-up" data-animate style="--i: 1">
+        <span class="split-text gold-foil" data-i18n="hero.title">Votre sourire, notre passion</span>
+      </h1>
+      <p class="hero-subtitle fade-up" data-animate style="--i: 2" data-i18n="hero.subtitle">Des soins dentaires d'exception dans un environnement chaleureux et moderne au cœur de Montréal.</p>
+      <div class="hero-buttons fade-up" data-animate style="--i: 3">
+        <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-primary magnetic" target="_blank" rel="noopener noreferrer" data-i18n="hero.cta_primary" data-i18n-href="booking.url">Prendre rendez-vous</a>
+        <a href="#services" class="btn-ghost magnetic" data-i18n="hero.cta_secondary">Nos services</a>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </section>
+
+  <!-- ==================== EMERGENCY + SAME-DAY BANNER ==================== -->
+  <section class="emergency">
+    <div class="container">
+      <a href="tel:5147672254">
+        <svg class="pulse-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span data-i18n="emergency.text">URGENCE DENTAIRE?</span>
+        <span data-i18n="emergency.phone">Appelez le 514 767 2254</span>
+      </a>
+    </div>
+  </section>
+
+  <main>
+
+  <!-- ==================== STATS COUNTER ==================== -->
+  <section class="section section-stats" data-animate>
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-up" data-animate style="--i: 0">
+          <div class="stat-number" data-count="15">0</div>
+          <div class="stat-label" data-i18n="stats.experience">Années d'expérience</div>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item fade-up" data-animate style="--i: 1">
+          <div class="stat-number" data-count="10000">0</div>
+          <div class="stat-label" data-i18n="stats.patients">Patients satisfaits</div>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item fade-up" data-animate style="--i: 2">
+          <div class="stat-number" data-count="3">0</div>
+          <div class="stat-label" data-i18n="stats.dentists">Dentistes dévoués</div>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item fade-up" data-animate style="--i: 3">
+          <div class="stat-number" data-count="8">0</div>
+          <div class="stat-label" data-i18n="stats.services">Services spécialisés</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SAME-DAY APPOINTMENT BANNER ==================== -->
+  <section class="section-sameday">
+    <div class="container">
+      <div class="sameday-inner fade-up" data-animate>
+        <div class="sameday-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="sameday-text">
+          <h3 data-i18n="sameday.title">Rendez-vous le jour même disponibles</h3>
+          <p data-i18n="sameday.desc">Nous comprenons que les urgences n'attendent pas. Contactez-nous pour un rendez-vous rapide.</p>
+        </div>
+        <a href="tel:5147672254" class="btn-primary magnetic" data-i18n="sameday.cta">Appelez maintenant</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GENERAL DENTISTRY ==================== -->
+  <section class="section section-general" id="services">
+    <div class="container">
+      <div class="section-two-col">
+        <div>
+          <div class="section-header">
+            <p class="section-eyebrow fade-up" data-animate data-i18n="general.eyebrow">SOINS COMPLETS</p>
+            <h2 class="section-title fade-up" data-animate style="--i: 1" data-i18n="general.title">Dentisterie Générale</h2>
+            <p class="section-subtitle fade-up" data-animate style="--i: 2" data-i18n="general.subtitle">Des soins complets pour toute la famille, dans un cadre confortable et accueillant.</p>
+          </div>
+          <div class="services-grid stagger" data-animate>
+            <div class="service-card card-hover fade-up" data-animate style="--i: 0">
+              <div class="service-card-header">
+                <svg aria-hidden="true" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 4c-5 0-9 4-9 9 0 4 2 7 4 10s3 7 3 11h4c0-4 1-8 3-11s4-6 4-10c0-5-4-9-9-9z"/><line x1="20" y1="38" x2="28" y2="38"/><line x1="20" y1="42" x2="28" y2="42"/></svg>
+                <h3 data-i18n="general.service1.title">Examen & Nettoyage</h3>
+              </div>
+              <p data-i18n="general.service1.desc">Examens complets et nettoyages professionnels pour maintenir votre santé buccale.</p>
+            </div>
+            <div class="service-card card-hover fade-up" data-animate style="--i: 1">
+              <div class="service-card-header">
+                <svg aria-hidden="true" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="10" width="36" height="28" rx="3"/><circle cx="24" cy="24" r="8"/><path d="M20 20l8 8M28 20l-8 8"/></svg>
+                <h3 data-i18n="general.service2.title">Radiographies</h3>
+              </div>
+              <p data-i18n="general.service2.desc">Imagerie numérique de pointe pour des diagnostics précis.</p>
+            </div>
+            <div class="service-card card-hover fade-up" data-animate style="--i: 2">
+              <div class="service-card-header">
+                <svg aria-hidden="true" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8c-4 0-7 5-7 12s3 20 7 20c2 0 3-2 6-2s4 2 6 2c4 0 7-13 7-20s-3-12-7-12c-2 0-4 2-6 2s-4-2-6-2z"/></svg>
+                <h3 data-i18n="general.service3.title">Obturations</h3>
+              </div>
+              <p data-i18n="general.service3.desc">Restaurations en composite pour des résultats naturels et durables.</p>
+            </div>
+            <div class="service-card card-hover fade-up" data-animate style="--i: 3">
+              <div class="service-card-header">
+                <svg aria-hidden="true" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 36l6-20 10 10 10-10 6 20z"/><rect x="8" y="36" width="32" height="4" rx="1"/></svg>
+                <h3 data-i18n="general.service4.title">Couronnes</h3>
+              </div>
+              <p data-i18n="general.service4.desc">Couronnes sur mesure pour protéger et restaurer vos dents.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-image scale-in" data-animate>
+          <div class="image-placeholder">
+            <span>Photo — Dentisterie Générale</span>
+          </div>
+          <div class="image-badge" data-i18n="general.badge">MONTREZ CE SOURIRE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PARALLAX DIVIDER ==================== -->
+  <div class="parallax-divider" aria-hidden="true">
+    <div class="parallax-divider-bg"></div>
+    <div class="parallax-divider-content">
+      <p class="parallax-quote" data-i18n="divider.quote">"Un sourire est la meilleure chose que vous puissiez porter."</p>
+    </div>
+  </div>
+
+  <!-- ==================== COSMETIC DENTISTRY ==================== -->
+  <section class="section section-cosmetic" id="cosmetic">
+    <div class="container">
+      <div class="section-two-col">
+        <div class="section-image scale-in" data-animate>
+          <div class="image-placeholder">
+            <span>Photo — Dentisterie Cosmétique</span>
+          </div>
+          <div class="image-badge" data-i18n="cosmetic.badge">SOURIRE RAVIVÉ</div>
+        </div>
+        <div>
+          <div class="section-header">
+            <p class="section-eyebrow fade-up" data-animate data-i18n="cosmetic.eyebrow">ESTHÉTIQUE DENTAIRE</p>
+            <h2 class="section-title fade-up" data-animate style="--i: 1" data-i18n="cosmetic.title">Dentisterie Cosmétique</h2>
+            <p class="section-subtitle fade-up" data-animate style="--i: 2" data-i18n="cosmetic.subtitle">Transformez votre sourire avec nos traitements esthétiques de pointe.</p>
+          </div>
+          <div class="services-grid stagger" data-animate>
+            <div class="service-card card-hover fade-up" data-animate style="--i: 0">
+              <div class="service-card-header">
+                <svg aria-hidden="true" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 18c0-6 6-10 14-10s14 4 14 10"/><path d="M10 30c0 6 6 10 14 10s14-4 14-10"/><path d="M10 18v12M38 18v12"/><line x1="18" y1="18" x2="18" y2="30" stroke-dasharray="2 2"/><line x1="24" y1="18" x2="24" y2="30" stroke-dasharray="2 2"/><line x1="30" y1="18" x2="30" y2="30" stroke-dasharray="2 2"/></svg>
+                <h3 data-i18n="cosmetic.service1.title">Invisalign</h3>
+              </div>
+              <p data-i18n="cosmetic.service1.desc">Alignez vos dents discrètement avec des gouttières transparentes.</p>
+            </div>
+            <div class="service-card card-hover fade-up" data-animate style="--i: 1">
+              <div class="service-card-header">
+                <svg aria-hidden="true" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="18" y="4" width="12" height="10" rx="2"/><path d="M20 14h8v6l-2 2h-4l-2-2z"/><path d="M22 22h4v6l-1 2h-2l-1-2z"/><path d="M23 30h2v8h-2z"/></svg>
+                <h3 data-i18n="cosmetic.service2.title">Implants</h3>
+              </div>
+              <p data-i18n="cosmetic.service2.desc">Solutions permanentes et naturelles pour remplacer les dents manquantes.</p>
+            </div>
+            <div class="service-card card-hover fade-up" data-animate style="--i: 2">
+              <div class="service-card-header">
+                <svg aria-hidden="true" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8c-3 0-5 4-5 10s2 16 5 18c2 1 4-1 8-1s6 2 8 1c3-2 5-12 5-18s-2-10-5-10c-2 0-4 2-8 2s-6-2-8-2z"/><path d="M18 16c0 0 3 2 6 2s6-2 6-2" stroke-dasharray="2 2"/></svg>
+                <h3 data-i18n="cosmetic.service3.title">Facettes en Porcelaine</h3>
+              </div>
+              <p data-i18n="cosmetic.service3.desc">Des facettes sur mesure pour un sourire parfait et harmonieux.</p>
+            </div>
+            <div class="service-card card-hover fade-up" data-animate style="--i: 3">
+              <div class="service-card-header">
+                <svg aria-hidden="true" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 4v4M36 8l-3 3M40 20h-4M36 32l-3-3M12 8l3 3M8 20h4M12 32l3-3"/><circle cx="24" cy="22" r="10"/><path d="M20 20l2 4 6-6"/></svg>
+                <h3 data-i18n="cosmetic.service4.title">Blanchiment</h3>
+              </div>
+              <p data-i18n="cosmetic.service4.desc">Retrouvez l'éclat de votre sourire avec notre traitement professionnel.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BEFORE / AFTER SLIDER ==================== -->
+  <section class="section section-beforeafter">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: var(--space-2xl);">
+        <p class="section-eyebrow fade-up" data-animate data-i18n="beforeafter.eyebrow">RÉSULTATS</p>
+        <h2 class="section-title heading-reveal fade-up" data-animate style="--i: 1" data-i18n="beforeafter.title">Voyez la différence</h2>
+        <p class="section-subtitle fade-up" data-animate style="--i: 2; margin-left: auto; margin-right: auto;" data-i18n="beforeafter.subtitle">Découvrez les transformations réalisées par notre équipe.</p>
+      </div>
+      <div class="ba-slider fade-up" data-animate>
+        <div class="ba-image ba-before">
+          <div class="ba-placeholder ba-placeholder-before">
+            <span data-i18n="beforeafter.before_label">Avant</span>
+          </div>
+          <span class="ba-label ba-label-before" data-i18n="beforeafter.before">AVANT</span>
+        </div>
+        <div class="ba-image ba-after">
+          <div class="ba-placeholder ba-placeholder-after">
+            <span data-i18n="beforeafter.after_label">Après</span>
+          </div>
+          <span class="ba-label ba-label-after" data-i18n="beforeafter.after">APRÈS</span>
+        </div>
+        <div class="ba-handle" aria-label="Drag to compare">
+          <div class="ba-handle-line"></div>
+          <div class="ba-handle-circle">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          </div>
+          <div class="ba-handle-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section class="section section-testimonials">
+    <div class="container">
+      <div class="section-header" style="text-align: center;">
+        <p class="section-eyebrow fade-up" data-animate data-i18n="testimonials.eyebrow">TÉMOIGNAGES</p>
+        <h2 class="section-title heading-reveal fade-up" data-animate style="--i: 1" data-i18n="testimonials.title">Ce que disent nos patients</h2>
+      </div>
+      <div class="testimonials-carousel fade-up" data-animate>
+        <div class="testimonial-track">
+          <div class="testimonial-card is-active">
+            <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+            <blockquote data-i18n="testimonials.quote1">"Service exceptionnel! L'équipe est chaleureuse et professionnelle. Je recommande vivement cette clinique à tous ceux qui cherchent un dentiste de confiance."</blockquote>
+            <cite data-i18n="testimonials.author1">— Marie-Claude L.</cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+            <blockquote data-i18n="testimonials.quote2">"Excellente expérience pour mon blanchiment. Résultats au-delà de mes attentes! Le Dr Ouahnich a pris le temps de tout m'expliquer."</blockquote>
+            <cite data-i18n="testimonials.author2">— Jean-Philippe D.</cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+            <blockquote data-i18n="testimonials.quote3">"La meilleure clinique dentaire que j'ai visitée. Environnement moderne et relaxant. Rendez-vous rapides et équipe attentionnée."</blockquote>
+            <cite data-i18n="testimonials.author3">— Sophie B.</cite>
+          </div>
+        </div>
+        <div class="testimonial-dots" aria-label="Testimonial navigation">
+          <button class="testimonial-dot is-active" aria-label="Témoignage 1"></button>
+          <button class="testimonial-dot" aria-label="Témoignage 2"></button>
+          <button class="testimonial-dot" aria-label="Témoignage 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TEAM ==================== -->
+  <section class="section section-team" id="team">
+    <div class="container">
+      <div class="section-header" style="text-align: center;">
+        <p class="section-eyebrow fade-up" data-animate data-i18n="team.eyebrow">NOTRE ÉQUIPE</p>
+        <h2 class="section-title heading-reveal fade-up" data-animate style="--i: 1" data-i18n="team.title">Rencontrez nos dentistes</h2>
+        <p class="section-subtitle fade-up" data-animate style="--i: 2; margin-left: auto; margin-right: auto;" data-i18n="team.subtitle">Nous travaillons pour rester à la fine pointe de la dentisterie afin d'obtenir des soins de haute qualité.</p>
+      </div>
+
+      <div class="team-grid stagger" data-animate>
+        <div class="team-card fade-up" data-animate style="--i: 0">
+          <div class="team-photo-wrapper">
+            <img class="team-photo" src="assets/images/team/nadav.avif" alt="Dr Nadav Ben-Loulou" loading="lazy">
+          </div>
+          <h3 class="team-name" data-i18n="team.member1.name">Dr Nadav Ben-Loulou</h3>
+          <p class="team-title" data-i18n="team.member1.title">Dentiste général</p>
+        </div>
+        <div class="team-card fade-up" data-animate style="--i: 1">
+          <div class="team-photo-wrapper">
+            <img class="team-photo" src="assets/images/team/pierre.avif" alt="Dr Pierre Mourad" loading="lazy">
+          </div>
+          <h3 class="team-name" data-i18n="team.member2.name">Dr Pierre Mourad</h3>
+          <p class="team-title" data-i18n="team.member2.title">Dentiste général</p>
+        </div>
+        <div class="team-card fade-up" data-animate style="--i: 2">
+          <div class="team-photo-wrapper">
+            <img class="team-photo" src="assets/images/team/yann.avif" alt="Dr Yann Ouahnich" loading="lazy">
+          </div>
+          <h3 class="team-name" data-i18n="team.member3.name">Dr Yann Ouahnich</h3>
+          <p class="team-title" data-i18n="team.member3.title">Dentiste général</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PARALLAX DIVIDER 2 ==================== -->
+  <div class="parallax-divider parallax-divider-2" aria-hidden="true">
+    <div class="parallax-divider-bg"></div>
+  </div>
+
+  <!-- ==================== FAQ ==================== -->
+  <section class="section section-faq" id="faq">
+    <div class="container">
+      <div class="section-two-col">
+        <div class="section-header">
+          <p class="section-eyebrow fade-up" data-animate data-i18n="faq.eyebrow">FAQ</p>
+          <h2 class="section-title fade-up" data-animate style="--i: 1" data-i18n="faq.title">Questions fréquentes</h2>
+          <p class="section-subtitle fade-up" data-animate style="--i: 2" data-i18n="faq.subtitle">Trouvez les réponses aux questions les plus courantes sur nos services.</p>
+        </div>
+        <div class="faq-list fade-up" data-animate>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q1">Acceptez-vous les nouveaux patients?</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" aria-hidden="true">
+              <p data-i18n="faq.a1">Oui! Nous accueillons chaleureusement les nouveaux patients de tous âges. Prenez rendez-vous en ligne ou appelez-nous directement.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q2">Quelles assurances acceptez-vous?</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" aria-hidden="true">
+              <p data-i18n="faq.a2">Nous acceptons la plupart des assurances dentaires privées. Nous pouvons soumettre vos réclamations électroniquement pour un remboursement plus rapide. Contactez-nous pour vérifier votre couverture.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q3">Offrez-vous des rendez-vous d'urgence?</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" aria-hidden="true">
+              <p data-i18n="faq.a3">Absolument. Nous réservons des plages horaires chaque jour pour les urgences dentaires. Appelez-nous au 514 767 2254 et nous vous verrons le plus rapidement possible.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q4">Le blanchiment dentaire est-il sécuritaire?</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" aria-hidden="true">
+              <p data-i18n="faq.a4">Oui, le blanchiment professionnel supervisé par un dentiste est tout à fait sécuritaire. Nous utilisons des produits de qualité professionnelle qui protègent l'émail tout en offrant des résultats optimaux.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q5">Combien de temps dure un traitement Invisalign?</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" aria-hidden="true">
+              <p data-i18n="faq.a5">La durée varie selon chaque cas, généralement entre 6 et 18 mois. Lors de votre consultation, nous vous fournirons un plan de traitement personnalisé avec une estimation précise.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INSURANCE ==================== -->
+  <section class="section section-insurance">
+    <div class="container">
+      <div class="insurance-inner fade-up" data-animate>
+        <div class="insurance-content">
+          <p class="section-eyebrow" data-i18n="insurance.eyebrow">ASSURANCES & PAIEMENTS</p>
+          <h2 class="section-title" data-i18n="insurance.title">Nous facilitons vos paiements</h2>
+          <p class="section-subtitle" data-i18n="insurance.desc">Nous acceptons la plupart des assurances dentaires privées et offrons la soumission électronique des réclamations pour un remboursement plus rapide.</p>
+        </div>
+        <div class="insurance-features">
+          <div class="insurance-feature">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span data-i18n="insurance.feature1">Assurances privées acceptées</span>
+          </div>
+          <div class="insurance-feature">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span data-i18n="insurance.feature2">Soumission électronique</span>
+          </div>
+          <div class="insurance-feature">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span data-i18n="insurance.feature3">Plans de paiement flexibles</span>
+          </div>
+          <div class="insurance-feature">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span data-i18n="insurance.feature4">Devis gratuit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="section section-contact" id="contact">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: var(--space-2xl);">
+        <p class="section-eyebrow fade-up" data-animate data-i18n="contact.eyebrow">CONTACTEZ-NOUS</p>
+        <h2 class="section-title heading-reveal fade-up" data-animate style="--i: 1" data-i18n="contact.title">Nous joindre</h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Map -->
+        <div class="contact-map fade-up" data-animate>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.8!2d-73.590!3d45.462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a3c0b3b3b3b%3A0x0!2s1825+Avenue+de+l'%C3%89glise%2C+Montr%C3%A9al!5e0!3m2!1sfr!2sca!4v1234567890"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Clinique Dentaire Sud Ouest - Google Maps">
+          </iframe>
+        </div>
+
+        <!-- Info -->
+        <div class="contact-info-card fade-up" data-animate style="--i: 1">
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <a href="https://maps.google.com/?q=1825+Avenue+de+l'Église+Montréal+QC" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="contact.address_line1">1825 Avenue de l'Église</span><br>
+                <span data-i18n="contact.address_line2">H4E 1G9, Montréal</span>
+              </a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <a href="tel:5147672254" data-i18n="contact.phone">514 767 2254</a>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <a href="mailto:info@sudouestdentaire.ca">info@sudouestdentaire.ca</a>
+          </div>
+
+          <!-- Hours -->
+          <div class="contact-hours">
+            <h4 data-i18n="contact.hours.title">Heures d'ouverture</h4>
+            <dl>
+              <dt data-i18n="contact.hours.weekdays">Lundi au vendredi</dt>
+              <dd data-i18n="contact.hours.weekdays_value">8h à 17h</dd>
+              <dt data-i18n="contact.hours.weekend">Samedi – Dimanche</dt>
+              <dd data-i18n="contact.hours.weekend_value">Fermé</dd>
+            </dl>
+          </div>
+
+          <!-- Social -->
+          <div class="social-links">
+            <a href="https://www.facebook.com/sudouestdentaire/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/sudouest_dentaire/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg class="icon-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle class="icon-dot" cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form fade-up" data-animate>
+        <div class="contact-form-inner">
+          <h3 data-i18n="form.title">Envoyez-nous un message</h3>
+          <form action="https://formspree.io/f/{your-form-id}" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name" data-i18n="form.name">Nom</label>
+                <input type="text" id="contact-name" name="name" required data-i18n-placeholder="form.name_placeholder" placeholder="Votre nom">
+              </div>
+              <div class="form-group">
+                <label for="email" data-i18n="form.email">Courriel</label>
+                <input type="email" id="email" name="email" required data-i18n-placeholder="form.email_placeholder" placeholder="votre@courriel.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message" data-i18n="form.message">Message</label>
+              <textarea id="message" name="message" required data-i18n-placeholder="form.message_placeholder" placeholder="Comment pouvons-nous vous aider?"></textarea>
+            </div>
+            <button type="submit" class="btn-submit magnetic" data-i18n="form.submit">Envoyer le message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-wordmark">SO</div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-i18n="footer.nav_title">Navigation</h4>
+          <div class="footer-links">
+            <a href="#hero" data-i18n="footer.link_home">Accueil</a>
+            <a href="#services" data-i18n="footer.link_general">Dentisterie Générale</a>
+            <a href="#cosmetic" data-i18n="footer.link_cosmetic">Dentisterie Cosmétique</a>
+            <a href="#team" data-i18n="footer.link_team">Notre Équipe</a>
+            <a href="#contact" data-i18n="footer.link_contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.info_title">Informations</h4>
+          <div class="footer-info">
+            <p data-i18n="contact.address_line1">1825 Avenue de l'Église</p>
+            <p data-i18n="contact.address_line2">H4E 1G9, Montréal</p>
+            <p><a href="tel:5147672254" data-i18n="contact.phone">514 767 2254</a></p>
+            <p><a href="mailto:info@sudouestdentaire.ca">info@sudouestdentaire.ca</a></p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.follow_title">Suivez-nous</h4>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/sudouestdentaire/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/sudouest_dentaire/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg class="icon-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle class="icon-dot" cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2026 Clinique Dentaire Sud Ouest. Tous droits réservés.</p>
+        <div class="footer-legal">
+          <a href="confidentialite.html" data-i18n="footer.link_privacy">Politique de confidentialité</a>
+          <a href="cookies.html" data-i18n="footer.link_cookies">Politique relative aux cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Retour en haut">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

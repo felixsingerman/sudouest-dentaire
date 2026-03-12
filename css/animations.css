@@ -1,0 +1,311 @@
+/* Scroll reveal base states */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.slide-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.slide-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale reveal for images */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.scale-in.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger children */
+.stagger > * {
+  transition-delay: calc(var(--i, 0) * 120ms);
+}
+
+/* Heading underline reveal */
+.heading-reveal::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  margin: var(--space-md) auto 0;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.heading-reveal.is-visible::after {
+  width: 60px;
+}
+
+/* Hero scroll indicator float */
+@keyframes float {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(8px); opacity: 0.7; }
+}
+
+.scroll-indicator {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Emergency pulse */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.pulse-icon {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Emergency banner sweep */
+@keyframes emergency-sweep {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Gold foil shimmer */
+@keyframes shimmer-gold {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating particles */
+@keyframes float-particle {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
+}
+
+@keyframes float-particle-reverse {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(-80vh) translateX(-40px); opacity: 0; }
+}
+
+/* Gentle glow pulse for interactive elements */
+@keyframes pulse-gentle {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(198, 166, 100, 0.2); }
+  50% { box-shadow: 0 0 20px 4px rgba(198, 166, 100, 0.1); }
+}
+
+/* Service card hover — includes opacity for fade-up compat */
+.card-hover {
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), opacity var(--transition-slow);
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Team photo effects */
+.team-photo {
+  filter: grayscale(100%);
+  transition: filter var(--transition-medium), transform var(--transition-medium);
+}
+
+.team-card:hover .team-photo {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}
+
+/* Team card name underline */
+.team-card .team-name {
+  position: relative;
+  display: inline-block;
+}
+
+.team-card .team-name::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: all var(--transition-fast);
+  transform: translateX(-50%);
+}
+
+.team-card:hover .team-name::after {
+  width: 100%;
+}
+
+/* Back to top button */
+.back-to-top {
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition-fast);
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Mobile menu link stagger */
+.mobile-nav-link {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 400ms ease-out, transform 400ms ease-out;
+}
+
+.mobile-menu.is-open .mobile-nav-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu.is-open .mobile-nav-link:nth-child(1) { transition-delay: 80ms; }
+.mobile-menu.is-open .mobile-nav-link:nth-child(2) { transition-delay: 140ms; }
+.mobile-menu.is-open .mobile-nav-link:nth-child(3) { transition-delay: 200ms; }
+.mobile-menu.is-open .mobile-nav-link:nth-child(4) { transition-delay: 260ms; }
+.mobile-menu.is-open .mobile-nav-link:nth-child(5) { transition-delay: 320ms; }
+
+/* Section divider decorative line */
+.section-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto var(--space-xl);
+  opacity: 0;
+  transition: opacity var(--transition-slow), width var(--transition-slow);
+}
+
+.section-divider.is-visible {
+  opacity: 1;
+  width: 60px;
+}
+
+/* Smooth counter animation for stats */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero orb floating */
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(40px, -30px); }
+  50% { transform: translate(-20px, 20px); }
+  75% { transform: translate(30px, 40px); }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(-50px, 30px); }
+  66% { transform: translate(30px, -40px); }
+}
+
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-30px, -20px); }
+  50% { transform: translate(20px, -40px); }
+  75% { transform: translate(-10px, 30px); }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  [data-animate] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .stagger > * {
+    transition-delay: 0ms !important;
+  }
+
+  .scroll-indicator,
+  .pulse-icon {
+    animation: none !important;
+  }
+
+  .heading-reveal::after {
+    width: 60px !important;
+    transition: none !important;
+  }
+
+  .team-photo {
+    filter: none !important;
+    transition: none !important;
+  }
+
+  .mobile-nav-link {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .section-divider {
+    opacity: 1 !important;
+    width: 60px !important;
+  }
+
+  .particle {
+    display: none !important;
+  }
+
+  .hero-title .gold-foil {
+    animation: none !important;
+  }
+
+  .emergency::before {
+    animation: none !important;
+  }
+
+  .hero-orb {
+    animation: none !important;
+  }
+
+  .testimonial-card {
+    transition: none !important;
+  }
+
+  .faq-answer {
+    transition: none !important;
+  }
+
+  .page-transition {
+    transition: none !important;
+  }
+}
