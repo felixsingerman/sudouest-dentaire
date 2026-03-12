@@ -4,24 +4,72 @@
 
   <url>
     <loc>https://sudouestdentaire.com/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sudouestdentaire.com/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sudouestdentaire.com/index.html"/>
     <lastmod>2026-03-13</lastmod>
     <priority>1.0</priority>
   </url>
 
+  <!-- Service pages -->
+  <url>
+    <loc>https://sudouestdentaire.com/services/invisalign.html</loc>
+    <lastmod>2026-03-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudouestdentaire.com/services/implants.html</loc>
+    <lastmod>2026-03-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudouestdentaire.com/services/blanchiment.html</loc>
+    <lastmod>2026-03-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudouestdentaire.com/services/facettes.html</loc>
+    <lastmod>2026-03-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudouestdentaire.com/services/couronnes.html</loc>
+    <lastmod>2026-03-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudouestdentaire.com/services/examen-nettoyage.html</loc>
+    <lastmod>2026-03-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://sudouestdentaire.com/blog/index.html</loc>
+    <lastmod>2026-03-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sudouestdentaire.com/blog/5-signes-nettoyage-dentaire.html</loc>
+    <lastmod>2026-03-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sudouestdentaire.com/blog/invisalign-vs-broches.html</loc>
+    <lastmod>2026-03-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sudouestdentaire.com/blog/peur-du-dentiste.html</loc>
+    <lastmod>2026-03-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Legal -->
   <url>
     <loc>https://sudouestdentaire.com/cookies.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sudouestdentaire.com/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sudouestdentaire.com/cookies.html"/>
     <lastmod>2026-03-13</lastmod>
     <priority>0.3</priority>
   </url>
-
   <url>
     <loc>https://sudouestdentaire.com/confidentialite.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sudouestdentaire.com/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sudouestdentaire.com/confidentialite.html"/>
     <lastmod>2026-03-13</lastmod>
     <priority>0.3</priority>
   </url>

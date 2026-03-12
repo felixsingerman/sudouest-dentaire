@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Implants dentaires à Montréal | Clinique Dentaire Sud Ouest</title>
+  <meta name="description" content="Implants dentaires à Montréal. Remplacez vos dents manquantes avec une solution permanente et naturelle. Consultez nos spécialistes à la Clinique Dentaire Sud Ouest.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#0c0c0c">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/variables.css?v=4">
+  <link rel="stylesheet" href="../css/styles.css?v=4">
+  <link rel="stylesheet" href="../css/animations.css?v=4">
+  <link rel="stylesheet" href="../css/responsive.css?v=4">
+
+  <style>
+    .treatment-hero {
+      background: var(--dark, #141414);
+      padding: 10rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .treatment-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--gold, #c6a664);
+      border-radius: 2px;
+    }
+    .treatment-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      color: var(--white, #fff);
+      margin-bottom: 1rem;
+    }
+    .treatment-hero .tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--text-muted-dark, rgba(255,255,255,0.5));
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .treatment-hero .btn-booking { display: inline-block; text-decoration: none; }
+    .treatment-section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    .treatment-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-bottom: 1.5rem;
+    }
+    .treatment-section p,
+    .treatment-section li {
+      line-height: 1.8;
+      color: var(--text-secondary, #71706e);
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+    .benefits-list { list-style: none; padding: 0; }
+    .benefits-list li { padding-left: 2rem; position: relative; margin-bottom: 0.75rem; }
+    .benefits-list li::before { content: '\2713'; position: absolute; left: 0; color: var(--gold, #c6a664); font-weight: 700; }
+    .process-steps { list-style: none; padding: 0; counter-reset: step; }
+    .process-steps li { counter-increment: step; padding-left: 3.5rem; position: relative; margin-bottom: 2rem; }
+    .process-steps li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: -0.1rem;
+      width: 2.2rem; height: 2.2rem; border-radius: 50%;
+      background: var(--gold, #c6a664); color: var(--black, #0c0c0c);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.95rem;
+    }
+    .process-steps li strong { display: block; color: var(--text, #1a1a1a); margin-bottom: 0.25rem; }
+    .pricing-card {
+      border: 2px solid var(--gold, #c6a664);
+      border-radius: var(--radius-md, 16px);
+      padding: 2.5rem; text-align: center;
+      max-width: 500px; margin: 2rem auto;
+      background: var(--offwhite, #fafaf8);
+    }
+    .pricing-card .price-range { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--gold, #c6a664); font-weight: 700; margin-bottom: 0.5rem; }
+    .pricing-card .price-note { font-size: 0.9rem; color: var(--text-secondary, #71706e); }
+    .faq-item { border-bottom: 1px solid var(--border-light, rgba(0,0,0,0.06)); }
+    .faq-item summary {
+      padding: 1.25rem 0; cursor: pointer; font-weight: 600; font-size: 1.05rem;
+      list-style: none; display: flex; justify-content: space-between; align-items: center;
+      color: var(--text, #1a1a1a);
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 1.4rem; color: var(--gold, #c6a664); transition: transform 0.3s; }
+    .faq-item[open] summary::after { content: '\2212'; }
+    .faq-item .faq-answer { padding: 0 0 1.5rem; line-height: 1.8; color: var(--text-secondary, #71706e); }
+    .treatment-cta { background: var(--dark, #141414); padding: 4rem 2rem; text-align: center; }
+    .treatment-cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2rem); color: var(--white, #fff); margin-bottom: 1.5rem; }
+    .treatment-cta .btn-booking { display: inline-block; text-decoration: none; }
+    .back-link { display: inline-block; margin: 2rem; color: var(--text-secondary, #71706e); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+    .back-link:hover { color: var(--gold, #c6a664); }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="lang-switcher">
+          <button class="lang-btn is-active" data-lang-switch="fr" aria-label="Français">FR</button>
+          <button class="lang-btn" data-lang-switch="en" aria-label="English">EN</button>
+        </div>
+        <a href="tel:5147672254" class="nav-phone">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-i18n="nav.phone">514 767 2254</span>
+        </a>
+      </div>
+      <a href="../index.html" class="nav-wordmark">SUD OUEST</a>
+      <div class="nav-actions-desktop">
+        <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-booking magnetic" target="_blank" rel="noopener noreferrer" data-i18n="nav.booking">PRENDRE RENDEZ-VOUS</a>
+      </div>
+      <div class="nav-actions-mobile">
+        <a href="../index.html" class="btn-booking" style="font-size: 0.75rem; padding: 0.5rem 1rem;" data-i18n="legal.back_home">ACCUEIL</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="treatment-hero">
+      <div>
+        <h1 data-i18n="implants.hero_title">Implants dentaires</h1>
+        <p class="tagline" data-i18n="implants.hero_tagline">Une solution permanente pour retrouver un sourire complet.</p>
+        <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-booking" target="_blank" rel="noopener noreferrer" data-i18n="implants.hero_cta">PRENDRE RENDEZ-VOUS</a>
+      </div>
+    </section>
+
+    <a href="index.html#services" class="back-link" data-i18n="services.back_link">&larr; Retour aux services</a>
+
+    <!-- What is it -->
+    <section class="treatment-section">
+      <h2 data-i18n="implants.what_title">Qu'est-ce qu'un implant dentaire?</h2>
+      <p data-i18n="implants.what_p1">Un implant dentaire est une racine artificielle en titane qui est insérée dans l'os de la mâchoire pour remplacer une dent manquante. Une fois l'implant solidement intégré à l'os, une couronne en porcelaine est fixée par-dessus, reproduisant l'apparence et la fonction d'une dent naturelle.</p>
+      <p data-i18n="implants.what_p2">Les implants dentaires représentent la solution la plus avancée et la plus durable pour remplacer des dents manquantes. Contrairement aux ponts ou aux prothèses amovibles, ils préservent la structure osseuse de la mâchoire et n'affectent pas les dents adjacentes saines.</p>
+      <p data-i18n="implants.what_p3">Que vous ayez perdu une seule dent ou plusieurs, les implants peuvent être adaptés à votre situation. Ils offrent une stabilité et un confort comparables à vos dents naturelles, vous permettant de manger, parler et sourire en toute confiance.</p>
+    </section>
+
+    <!-- Benefits -->
+    <section class="treatment-section">
+      <h2 data-i18n="implants.benefits_title">Avantages des implants dentaires</h2>
+      <ul class="benefits-list">
+        <li data-i18n="implants.benefit_1">Solution permanente avec une durée de vie pouvant dépasser 25 ans</li>
+        <li data-i18n="implants.benefit_2">Apparence et sensation identiques à une dent naturelle</li>
+        <li data-i18n="implants.benefit_3">Préservation de l'os de la mâchoire et prévention de la résorption osseuse</li>
+        <li data-i18n="implants.benefit_4">Aucun impact sur les dents adjacentes saines</li>
+        <li data-i18n="implants.benefit_5">Stabilité supérieure aux prothèses amovibles</li>
+        <li data-i18n="implants.benefit_6">Entretien simple, identique à celui des dents naturelles</li>
+      </ul>
+    </section>
+
+    <!-- Process -->
+    <section class="treatment-section">
+      <h2 data-i18n="implants.process_title">Le processus d'implantation</h2>
+      <ol class="process-steps">
+        <li>
+          <strong data-i18n="implants.step1_title">Évaluation et planification</strong>
+          <span data-i18n="implants.step1_desc">Un examen complet incluant des radiographies et un scan 3D permet d'évaluer la qualité de l'os et de planifier le positionnement optimal de l'implant.</span>
+        </li>
+        <li>
+          <strong data-i18n="implants.step2_title">Pose de l'implant</strong>
+          <span data-i18n="implants.step2_desc">L'implant en titane est inséré dans l'os de la mâchoire sous anesthésie locale. L'intervention est généralement indolore et dure environ une heure par implant.</span>
+        </li>
+        <li>
+          <strong data-i18n="implants.step3_title">Période de guérison</strong>
+          <span data-i18n="implants.step3_desc">L'ostéointégration, soit la fusion de l'implant avec l'os, prend généralement de 3 à 6 mois. Une prothèse temporaire peut être portée pendant cette période.</span>
+        </li>
+        <li>
+          <strong data-i18n="implants.step4_title">Pose de la couronne</strong>
+          <span data-i18n="implants.step4_desc">Une fois l'implant solidement intégré, une couronne en porcelaine sur mesure est fixée, complétant la restauration avec un résultat esthétique et fonctionnel optimal.</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Pricing -->
+    <section class="treatment-section">
+      <h2 data-i18n="implants.pricing_title">Tarification</h2>
+      <div class="pricing-card">
+        <div class="price-range" data-i18n="implants.price_range">3 000$ &ndash; 5 000$</div>
+        <p class="price-note" data-i18n="implants.price_note">Par implant, incluant la chirurgie et la couronne. Le coût total dépend du nombre d'implants nécessaires et des traitements préalables éventuels.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="treatment-section">
+      <h2 data-i18n="implants.faq_title">Questions fréquentes</h2>
+
+      <details class="faq-item">
+        <summary data-i18n="implants.faq1_q">Est-ce que la pose d'un implant est douloureuse?</summary>
+        <p class="faq-answer" data-i18n="implants.faq1_a">La chirurgie se fait sous anesthésie locale, vous ne ressentirez donc aucune douleur pendant l'intervention. Après la procédure, un léger inconfort peut être géré avec des analgésiques courants pendant quelques jours.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="implants.faq2_q">Quelle est la durée de vie d'un implant dentaire?</summary>
+        <p class="faq-answer" data-i18n="implants.faq2_a">Avec un bon entretien et une hygiène buccale adéquate, un implant dentaire peut durer toute la vie. La couronne posée sur l'implant peut nécessiter un remplacement après 15 à 25 ans, selon l'usure.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="implants.faq3_q">Suis-je un bon candidat pour un implant dentaire?</summary>
+        <p class="faq-answer" data-i18n="implants.faq3_a">La plupart des adultes en bonne santé sont de bons candidats. Il est important d'avoir une quantité suffisante d'os dans la mâchoire, bien qu'une greffe osseuse puisse être envisagée au besoin. Certaines conditions médicales ou le tabagisme peuvent affecter le succès du traitement.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="implants.faq4_q">Les implants sont-ils couverts par les assurances?</summary>
+        <p class="faq-answer" data-i18n="implants.faq4_a">De nombreux régimes d'assurance couvrent une partie du coût des implants dentaires. La couverture varie selon votre plan. Notre équipe administrative peut vous aider à vérifier votre admissibilité et à préparer les documents nécessaires.</p>
+      </details>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="treatment-cta">
+      <h2 data-i18n="implants.cta_title">Prêt à commencer?</h2>
+      <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-booking" target="_blank" rel="noopener noreferrer" data-i18n="implants.cta_button">PRENDRE RENDEZ-VOUS</a>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-wordmark">SO</div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-i18n="footer.nav_title">Navigation</h4>
+          <div class="footer-links">
+            <a href="../index.html" data-i18n="footer.link_home">Accueil</a>
+            <a href="../index.html#services" data-i18n="footer.link_general">Dentisterie Générale</a>
+            <a href="../index.html#cosmetic" data-i18n="footer.link_cosmetic">Dentisterie Cosmétique</a>
+            <a href="../index.html#team" data-i18n="footer.link_team">Notre Équipe</a>
+            <a href="../index.html#contact" data-i18n="footer.link_contact">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.info_title">Informations</h4>
+          <div class="footer-info">
+            <p data-i18n="contact.address_line1">1825 Avenue de l'Église</p>
+            <p data-i18n="contact.address_line2">H4E 1G9, Montréal</p>
+            <p><a href="tel:5147672254" data-i18n="contact.phone">514 767 2254</a></p>
+            <p><a href="mailto:info@sudouestdentaire.ca">info@sudouestdentaire.ca</a></p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.follow_title">Suivez-nous</h4>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/sudouestdentaire/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/sudouest_dentaire/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg class="icon-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle class="icon-dot" cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 Clinique Dentaire Sud Ouest. Tous droits réservés.</p>
+        <div class="footer-legal">
+          <a href="../confidentialite.html" data-i18n="footer.link_privacy">Politique de confidentialité</a>
+          <a href="../cookies.html" data-i18n="footer.link_cookies">Politique relative aux cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

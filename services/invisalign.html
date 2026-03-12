@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invisalign à Montréal | Clinique Dentaire Sud Ouest</title>
+  <meta name="description" content="Traitement Invisalign à Montréal. Alignez vos dents discrètement avec des gouttières transparentes. Consultation gratuite à la Clinique Dentaire Sud Ouest.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#0c0c0c">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/variables.css?v=4">
+  <link rel="stylesheet" href="../css/styles.css?v=4">
+  <link rel="stylesheet" href="../css/animations.css?v=4">
+  <link rel="stylesheet" href="../css/responsive.css?v=4">
+
+  <style>
+    /* Hero */
+    .treatment-hero {
+      background: var(--dark, #141414);
+      padding: 10rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .treatment-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--gold, #c6a664);
+      border-radius: 2px;
+    }
+    .treatment-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      color: var(--white, #fff);
+      margin-bottom: 1rem;
+    }
+    .treatment-hero .tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--text-muted-dark, rgba(255,255,255,0.5));
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .treatment-hero .btn-booking {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    /* Content sections */
+    .treatment-section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    .treatment-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-bottom: 1.5rem;
+    }
+    .treatment-section p,
+    .treatment-section li {
+      line-height: 1.8;
+      color: var(--text-secondary, #71706e);
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+
+    /* Benefits */
+    .benefits-list {
+      list-style: none;
+      padding: 0;
+    }
+    .benefits-list li {
+      padding-left: 2rem;
+      position: relative;
+      margin-bottom: 0.75rem;
+    }
+    .benefits-list li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: var(--gold, #c6a664);
+      font-weight: 700;
+    }
+
+    /* Process steps */
+    .process-steps {
+      list-style: none;
+      padding: 0;
+      counter-reset: step;
+    }
+    .process-steps li {
+      counter-increment: step;
+      padding-left: 3.5rem;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .process-steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: -0.1rem;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 50%;
+      background: var(--gold, #c6a664);
+      color: var(--black, #0c0c0c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .process-steps li strong {
+      display: block;
+      color: var(--text, #1a1a1a);
+      margin-bottom: 0.25rem;
+    }
+
+    /* Pricing card */
+    .pricing-card {
+      border: 2px solid var(--gold, #c6a664);
+      border-radius: var(--radius-md, 16px);
+      padding: 2.5rem;
+      text-align: center;
+      max-width: 500px;
+      margin: 2rem auto;
+      background: var(--offwhite, #fafaf8);
+    }
+    .pricing-card .price-range {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--gold, #c6a664);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .pricing-card .price-note {
+      font-size: 0.9rem;
+      color: var(--text-secondary, #71706e);
+    }
+
+    /* FAQ accordion */
+    .faq-item {
+      border-bottom: 1px solid var(--border-light, rgba(0,0,0,0.06));
+      padding: 0;
+    }
+    .faq-item summary {
+      padding: 1.25rem 0;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.05rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text, #1a1a1a);
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--gold, #c6a664);
+      transition: transform 0.3s;
+    }
+    .faq-item[open] summary::after {
+      content: '\2212';
+    }
+    .faq-item .faq-answer {
+      padding: 0 0 1.5rem;
+      line-height: 1.8;
+      color: var(--text-secondary, #71706e);
+    }
+
+    /* Bottom CTA */
+    .treatment-cta {
+      background: var(--dark, #141414);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .treatment-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--white, #fff);
+      margin-bottom: 1.5rem;
+    }
+    .treatment-cta .btn-booking {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    /* Back link */
+    .back-link {
+      display: inline-block;
+      margin: 2rem;
+      color: var(--text-secondary, #71706e);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+    .back-link:hover { color: var(--gold, #c6a664); }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="lang-switcher">
+          <button class="lang-btn is-active" data-lang-switch="fr" aria-label="Français">FR</button>
+          <button class="lang-btn" data-lang-switch="en" aria-label="English">EN</button>
+        </div>
+        <a href="tel:5147672254" class="nav-phone">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-i18n="nav.phone">514 767 2254</span>
+        </a>
+      </div>
+
+      <a href="../index.html" class="nav-wordmark">SUD OUEST</a>
+
+      <div class="nav-actions-desktop">
+        <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-booking magnetic" target="_blank" rel="noopener noreferrer" data-i18n="nav.booking">PRENDRE RENDEZ-VOUS</a>
+      </div>
+
+      <div class="nav-actions-mobile">
+        <a href="../index.html" class="btn-booking" style="font-size: 0.75rem; padding: 0.5rem 1rem;" data-i18n="legal.back_home">ACCUEIL</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="treatment-hero">
+      <div>
+        <h1 data-i18n="invisalign.hero_title">Invisalign</h1>
+        <p class="tagline" data-i18n="invisalign.hero_tagline">Des dents parfaitement alignées, en toute discrétion.</p>
+        <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-booking" target="_blank" rel="noopener noreferrer" data-i18n="invisalign.hero_cta">PRENDRE RENDEZ-VOUS</a>
+      </div>
+    </section>
+
+    <!-- Back link -->
+    <a href="index.html#services" class="back-link" data-i18n="services.back_link">&larr; Retour aux services</a>
+
+    <!-- What is it -->
+    <section class="treatment-section">
+      <h2 data-i18n="invisalign.what_title">Qu'est-ce qu'Invisalign?</h2>
+      <p data-i18n="invisalign.what_p1">Invisalign est un traitement orthodontique moderne qui utilise une série de gouttières transparentes et amovibles pour aligner progressivement vos dents. Contrairement aux broches traditionnelles, les aligneurs Invisalign sont pratiquement invisibles et s'adaptent confortablement à votre mode de vie.</p>
+      <p data-i18n="invisalign.what_p2">Chaque paire de gouttières est fabriquée sur mesure grâce à une technologie de numérisation 3D avancée. Vous les portez environ 22 heures par jour et les changez toutes les une à deux semaines, selon le plan de traitement établi par votre dentiste.</p>
+      <p data-i18n="invisalign.what_p3">Ce traitement convient aussi bien aux adultes qu'aux adolescents et peut corriger un large éventail de problèmes d'alignement, incluant les dents chevauchées, les espaces interdentaires et les malocclusions légères à modérées.</p>
+    </section>
+
+    <!-- Benefits -->
+    <section class="treatment-section">
+      <h2 data-i18n="invisalign.benefits_title">Avantages d'Invisalign</h2>
+      <ul class="benefits-list">
+        <li data-i18n="invisalign.benefit_1">Gouttières pratiquement invisibles pour un sourire naturel pendant le traitement</li>
+        <li data-i18n="invisalign.benefit_2">Amovibles pour manger, boire et se brosser les dents sans contrainte</li>
+        <li data-i18n="invisalign.benefit_3">Confort supérieur aux broches métalliques, sans fils ni crochets irritants</li>
+        <li data-i18n="invisalign.benefit_4">Moins de visites au cabinet dentaire qu'avec un traitement orthodontique classique</li>
+        <li data-i18n="invisalign.benefit_5">Résultats prévisibles grâce à la planification numérique 3D</li>
+        <li data-i18n="invisalign.benefit_6">Hygiène dentaire facilitée tout au long du traitement</li>
+      </ul>
+    </section>
+
+    <!-- Process -->
+    <section class="treatment-section">
+      <h2 data-i18n="invisalign.process_title">Comment ça fonctionne</h2>
+      <ol class="process-steps">
+        <li>
+          <strong data-i18n="invisalign.step1_title">Consultation initiale</strong>
+          <span data-i18n="invisalign.step1_desc">Votre dentiste évalue votre dentition, prend des empreintes numériques 3D et discute de vos objectifs pour déterminer si Invisalign vous convient.</span>
+        </li>
+        <li>
+          <strong data-i18n="invisalign.step2_title">Plan de traitement personnalisé</strong>
+          <span data-i18n="invisalign.step2_desc">Un plan de traitement numérique est créé, vous permettant de visualiser le résultat final avant même de commencer. Vos gouttières sur mesure sont ensuite fabriquées.</span>
+        </li>
+        <li>
+          <strong data-i18n="invisalign.step3_title">Port des gouttières</strong>
+          <span data-i18n="invisalign.step3_desc">Vous portez chaque série de gouttières pendant une à deux semaines, en les retirant uniquement pour manger et vous brosser les dents. Des suivis réguliers permettent de vérifier la progression.</span>
+        </li>
+        <li>
+          <strong data-i18n="invisalign.step4_title">Résultat et maintien</strong>
+          <span data-i18n="invisalign.step4_desc">Une fois le traitement terminé, un appareil de rétention est fourni pour maintenir vos dents dans leur nouvelle position et préserver votre sourire.</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Pricing -->
+    <section class="treatment-section">
+      <h2 data-i18n="invisalign.pricing_title">Tarification</h2>
+      <div class="pricing-card">
+        <div class="price-range" data-i18n="invisalign.price_range">3 500$ &ndash; 8 000$</div>
+        <p class="price-note" data-i18n="invisalign.price_note">Le coût varie selon la complexité du cas et la durée du traitement. Une estimation précise vous sera fournie lors de la consultation.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="treatment-section">
+      <h2 data-i18n="invisalign.faq_title">Questions fréquentes</h2>
+
+      <details class="faq-item">
+        <summary data-i18n="invisalign.faq1_q">Combien de temps dure un traitement Invisalign?</summary>
+        <p class="faq-answer" data-i18n="invisalign.faq1_a">La durée varie généralement entre 6 et 18 mois, selon la complexité de votre cas. Votre dentiste vous donnera une estimation précise lors de la consultation initiale.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="invisalign.faq2_q">Est-ce que le traitement est douloureux?</summary>
+        <p class="faq-answer" data-i18n="invisalign.faq2_a">Vous pouvez ressentir une légère pression ou un inconfort lors du changement de gouttières, ce qui est normal et indique que le traitement fonctionne. Cette sensation disparaît généralement en un à deux jours.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="invisalign.faq3_q">Invisalign est-il couvert par les assurances?</summary>
+        <p class="faq-answer" data-i18n="invisalign.faq3_a">Plusieurs régimes d'assurance dentaire couvrent une partie des traitements orthodontiques, incluant Invisalign. Nous vous recommandons de vérifier votre couverture auprès de votre assureur. Notre équipe peut vous aider avec les réclamations.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="invisalign.faq4_q">Puis-je manger normalement avec Invisalign?</summary>
+        <p class="faq-answer" data-i18n="invisalign.faq4_a">Oui! L'un des grands avantages d'Invisalign est que les gouttières sont amovibles. Vous les retirez pour manger et boire (sauf l'eau), ce qui vous permet de profiter de tous vos aliments préférés sans restriction.</p>
+      </details>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="treatment-cta">
+      <h2 data-i18n="invisalign.cta_title">Prêt à commencer?</h2>
+      <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-booking" target="_blank" rel="noopener noreferrer" data-i18n="invisalign.cta_button">PRENDRE RENDEZ-VOUS</a>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-wordmark">SO</div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-i18n="footer.nav_title">Navigation</h4>
+          <div class="footer-links">
+            <a href="../index.html" data-i18n="footer.link_home">Accueil</a>
+            <a href="../index.html#services" data-i18n="footer.link_general">Dentisterie Générale</a>
+            <a href="../index.html#cosmetic" data-i18n="footer.link_cosmetic">Dentisterie Cosmétique</a>
+            <a href="../index.html#team" data-i18n="footer.link_team">Notre Équipe</a>
+            <a href="../index.html#contact" data-i18n="footer.link_contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.info_title">Informations</h4>
+          <div class="footer-info">
+            <p data-i18n="contact.address_line1">1825 Avenue de l'Église</p>
+            <p data-i18n="contact.address_line2">H4E 1G9, Montréal</p>
+            <p><a href="tel:5147672254" data-i18n="contact.phone">514 767 2254</a></p>
+            <p><a href="mailto:info@sudouestdentaire.ca">info@sudouestdentaire.ca</a></p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.follow_title">Suivez-nous</h4>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/sudouestdentaire/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/sudouest_dentaire/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg class="icon-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle class="icon-dot" cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 Clinique Dentaire Sud Ouest. Tous droits réservés.</p>
+        <div class="footer-legal">
+          <a href="../confidentialite.html" data-i18n="footer.link_privacy">Politique de confidentialité</a>
+          <a href="../cookies.html" data-i18n="footer.link_cookies">Politique relative aux cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/i18n.js"></script>
+
+</body>
+</html>

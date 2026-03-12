@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facettes dentaires à Montréal | Clinique Dentaire Sud Ouest</title>
+  <meta name="description" content="Facettes en porcelaine à Montréal. Transformez votre sourire avec des facettes sur mesure. Résultats naturels et durables à la Clinique Dentaire Sud Ouest.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#0c0c0c">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/variables.css?v=4">
+  <link rel="stylesheet" href="../css/styles.css?v=4">
+  <link rel="stylesheet" href="../css/animations.css?v=4">
+  <link rel="stylesheet" href="../css/responsive.css?v=4">
+
+  <style>
+    .treatment-hero {
+      background: var(--dark, #141414);
+      padding: 10rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .treatment-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--gold, #c6a664);
+      border-radius: 2px;
+    }
+    .treatment-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      color: var(--white, #fff);
+      margin-bottom: 1rem;
+    }
+    .treatment-hero .tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--text-muted-dark, rgba(255,255,255,0.5));
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .treatment-hero .btn-booking { display: inline-block; text-decoration: none; }
+    .treatment-section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    .treatment-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-bottom: 1.5rem;
+    }
+    .treatment-section p,
+    .treatment-section li {
+      line-height: 1.8;
+      color: var(--text-secondary, #71706e);
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+    .benefits-list { list-style: none; padding: 0; }
+    .benefits-list li { padding-left: 2rem; position: relative; margin-bottom: 0.75rem; }
+    .benefits-list li::before { content: '\2713'; position: absolute; left: 0; color: var(--gold, #c6a664); font-weight: 700; }
+    .process-steps { list-style: none; padding: 0; counter-reset: step; }
+    .process-steps li { counter-increment: step; padding-left: 3.5rem; position: relative; margin-bottom: 2rem; }
+    .process-steps li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: -0.1rem;
+      width: 2.2rem; height: 2.2rem; border-radius: 50%;
+      background: var(--gold, #c6a664); color: var(--black, #0c0c0c);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.95rem;
+    }
+    .process-steps li strong { display: block; color: var(--text, #1a1a1a); margin-bottom: 0.25rem; }
+    .pricing-card {
+      border: 2px solid var(--gold, #c6a664);
+      border-radius: var(--radius-md, 16px);
+      padding: 2.5rem; text-align: center;
+      max-width: 500px; margin: 2rem auto;
+      background: var(--offwhite, #fafaf8);
+    }
+    .pricing-card .price-range { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--gold, #c6a664); font-weight: 700; margin-bottom: 0.5rem; }
+    .pricing-card .price-note { font-size: 0.9rem; color: var(--text-secondary, #71706e); }
+    .faq-item { border-bottom: 1px solid var(--border-light, rgba(0,0,0,0.06)); }
+    .faq-item summary {
+      padding: 1.25rem 0; cursor: pointer; font-weight: 600; font-size: 1.05rem;
+      list-style: none; display: flex; justify-content: space-between; align-items: center;
+      color: var(--text, #1a1a1a);
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 1.4rem; color: var(--gold, #c6a664); transition: transform 0.3s; }
+    .faq-item[open] summary::after { content: '\2212'; }
+    .faq-item .faq-answer { padding: 0 0 1.5rem; line-height: 1.8; color: var(--text-secondary, #71706e); }
+    .treatment-cta { background: var(--dark, #141414); padding: 4rem 2rem; text-align: center; }
+    .treatment-cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2rem); color: var(--white, #fff); margin-bottom: 1.5rem; }
+    .treatment-cta .btn-booking { display: inline-block; text-decoration: none; }
+    .back-link { display: inline-block; margin: 2rem; color: var(--text-secondary, #71706e); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+    .back-link:hover { color: var(--gold, #c6a664); }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="lang-switcher">
+          <button class="lang-btn is-active" data-lang-switch="fr" aria-label="Français">FR</button>
+          <button class="lang-btn" data-lang-switch="en" aria-label="English">EN</button>
+        </div>
+        <a href="tel:5147672254" class="nav-phone">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-i18n="nav.phone">514 767 2254</span>
+        </a>
+      </div>
+      <a href="../index.html" class="nav-wordmark">SUD OUEST</a>
+      <div class="nav-actions-desktop">
+        <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-booking magnetic" target="_blank" rel="noopener noreferrer" data-i18n="nav.booking">PRENDRE RENDEZ-VOUS</a>
+      </div>
+      <div class="nav-actions-mobile">
+        <a href="../index.html" class="btn-booking" style="font-size: 0.75rem; padding: 0.5rem 1rem;" data-i18n="legal.back_home">ACCUEIL</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="treatment-hero">
+      <div>
+        <h1 data-i18n="facettes.hero_title">Facettes en porcelaine</h1>
+        <p class="tagline" data-i18n="facettes.hero_tagline">Le sourire dont vous avez toujours rêvé, sur mesure.</p>
+        <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-booking" target="_blank" rel="noopener noreferrer" data-i18n="facettes.hero_cta">PRENDRE RENDEZ-VOUS</a>
+      </div>
+    </section>
+
+    <a href="index.html#services" class="back-link" data-i18n="services.back_link">&larr; Retour aux services</a>
+
+    <!-- What is it -->
+    <section class="treatment-section">
+      <h2 data-i18n="facettes.what_title">Qu'est-ce qu'une facette dentaire?</h2>
+      <p data-i18n="facettes.what_p1">Les facettes dentaires sont de fines coquilles de porcelaine fabriquées sur mesure qui sont collées sur la surface visible de vos dents. Elles permettent de corriger une variété d'imperfections esthétiques en une transformation remarquable et durable.</p>
+      <p data-i18n="facettes.what_p2">La porcelaine utilisée reproduit fidèlement la translucidité et la luminosité de l'émail naturel. Chaque facette est conçue individuellement en tenant compte de la forme de votre visage, de la couleur souhaitée et de l'harmonie de votre sourire dans son ensemble.</p>
+      <p data-i18n="facettes.what_p3">Les facettes sont une solution polyvalente pour corriger les dents décolorées, ébréchées, légèrement désalignées ou présentant des espaces. Elles offrent un résultat esthétique naturel qui peut transformer complètement l'apparence de votre sourire.</p>
+    </section>
+
+    <!-- Benefits -->
+    <section class="treatment-section">
+      <h2 data-i18n="facettes.benefits_title">Avantages des facettes en porcelaine</h2>
+      <ul class="benefits-list">
+        <li data-i18n="facettes.benefit_1">Résultat esthétique naturel et harmonieux</li>
+        <li data-i18n="facettes.benefit_2">Résistance aux taches supérieure à l'émail naturel</li>
+        <li data-i18n="facettes.benefit_3">Correction de multiples imperfections en un seul traitement</li>
+        <li data-i18n="facettes.benefit_4">Durabilité remarquable pouvant atteindre 15 à 20 ans</li>
+        <li data-i18n="facettes.benefit_5">Procédure minimalement invasive avec conservation maximale de la dent</li>
+        <li data-i18n="facettes.benefit_6">Biocompatibilité de la porcelaine avec les tissus gingivaux</li>
+      </ul>
+    </section>
+
+    <!-- Process -->
+    <section class="treatment-section">
+      <h2 data-i18n="facettes.process_title">Le processus de pose</h2>
+      <ol class="process-steps">
+        <li>
+          <strong data-i18n="facettes.step1_title">Consultation et design du sourire</strong>
+          <span data-i18n="facettes.step1_desc">Votre dentiste évalue votre dentition, discute de vos objectifs esthétiques et réalise un design numérique de votre futur sourire pour vous permettre de visualiser le résultat attendu.</span>
+        </li>
+        <li>
+          <strong data-i18n="facettes.step2_title">Préparation des dents</strong>
+          <span data-i18n="facettes.step2_desc">Une fine couche d'émail (environ 0,5 mm) est retirée pour accueillir les facettes. Des empreintes précises sont prises et des facettes temporaires sont posées pendant la fabrication.</span>
+        </li>
+        <li>
+          <strong data-i18n="facettes.step3_title">Pose des facettes</strong>
+          <span data-i18n="facettes.step3_desc">Les facettes en porcelaine sont essayées, ajustées et collées de façon permanente avec un ciment spécial. La couleur, la forme et l'ajustement sont vérifiés méticuleusement avant la cimentation finale.</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Pricing -->
+    <section class="treatment-section">
+      <h2 data-i18n="facettes.pricing_title">Tarification</h2>
+      <div class="pricing-card">
+        <div class="price-range" data-i18n="facettes.price_range">900$ &ndash; 2 000$</div>
+        <p class="price-note" data-i18n="facettes.price_note">Par dent. Le prix varie selon le type de porcelaine et la complexité du cas. Un devis détaillé est fourni lors de la consultation.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="treatment-section">
+      <h2 data-i18n="facettes.faq_title">Questions fréquentes</h2>
+
+      <details class="faq-item">
+        <summary data-i18n="facettes.faq1_q">Combien de temps durent les facettes en porcelaine?</summary>
+        <p class="faq-answer" data-i18n="facettes.faq1_a">Avec un entretien adéquat, les facettes en porcelaine durent en moyenne 15 à 20 ans. Leur longévité dépend de vos habitudes d'hygiène buccale et de l'absence de comportements à risque comme le grincement des dents.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="facettes.faq2_q">La pose de facettes est-elle douloureuse?</summary>
+        <p class="faq-answer" data-i18n="facettes.faq2_a">La procédure est généralement indolore grâce à l'anesthésie locale. La préparation de l'émail est minimale. Une légère sensibilité peut survenir dans les jours suivant la pose, mais elle est temporaire.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="facettes.faq3_q">Les facettes peuvent-elles se tacher?</summary>
+        <p class="faq-answer" data-i18n="facettes.faq3_a">La porcelaine est très résistante aux taches, bien plus que l'émail naturel. Cependant, le ciment utilisé pour coller les facettes peut se décolorer légèrement avec le temps. Un entretien régulier et des visites de nettoyage aident à préserver leur apparence.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="facettes.faq4_q">Les facettes sont-elles réversibles?</summary>
+        <p class="faq-answer" data-i18n="facettes.faq4_a">La pose de facettes traditionnelles nécessite le retrait d'une fine couche d'émail, ce qui rend le processus irréversible. C'est pourquoi il est important de bien réfléchir à votre décision et de discuter de toutes les options avec votre dentiste.</p>
+      </details>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="treatment-cta">
+      <h2 data-i18n="facettes.cta_title">Prêt à commencer?</h2>
+      <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-booking" target="_blank" rel="noopener noreferrer" data-i18n="facettes.cta_button">PRENDRE RENDEZ-VOUS</a>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-wordmark">SO</div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-i18n="footer.nav_title">Navigation</h4>
+          <div class="footer-links">
+            <a href="../index.html" data-i18n="footer.link_home">Accueil</a>
+            <a href="../index.html#services" data-i18n="footer.link_general">Dentisterie Générale</a>
+            <a href="../index.html#cosmetic" data-i18n="footer.link_cosmetic">Dentisterie Cosmétique</a>
+            <a href="../index.html#team" data-i18n="footer.link_team">Notre Équipe</a>
+            <a href="../index.html#contact" data-i18n="footer.link_contact">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.info_title">Informations</h4>
+          <div class="footer-info">
+            <p data-i18n="contact.address_line1">1825 Avenue de l'Église</p>
+            <p data-i18n="contact.address_line2">H4E 1G9, Montréal</p>
+            <p><a href="tel:5147672254" data-i18n="contact.phone">514 767 2254</a></p>
+            <p><a href="mailto:info@sudouestdentaire.ca">info@sudouestdentaire.ca</a></p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.follow_title">Suivez-nous</h4>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/sudouestdentaire/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/sudouest_dentaire/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg class="icon-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle class="icon-dot" cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 Clinique Dentaire Sud Ouest. Tous droits réservés.</p>
+        <div class="footer-legal">
+          <a href="../confidentialite.html" data-i18n="footer.link_privacy">Politique de confidentialité</a>
+          <a href="../cookies.html" data-i18n="footer.link_cookies">Politique relative aux cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+</body>
+</html>
