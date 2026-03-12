@@ -1,102 +1,179 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" translate="no">
 <head>
   <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Politique relative aux cookies | Clinique Dentaire Sud Ouest</title>
-  <meta name="description" content="Politique relative aux cookies de la Clinique Dentaire Sud Ouest à Montréal.">
+  <meta name="description" content="Politique relative aux cookies de la Clinique Dentaire Sud Ouest. Découvrez comment nous utilisons les cookies sur notre site Web.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0c0c0c">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css?v=4">
+  <link rel="stylesheet" href="css/styles.css?v=4">
+  <link rel="stylesheet" href="css/animations.css?v=4">
+  <link rel="stylesheet" href="css/responsive.css?v=4">
+
+  <style>
+    .legal-page { padding: 8rem 0 4rem; min-height: 100vh; }
+    .legal-page .container { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+    .legal-page h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem; }
+    .legal-page .legal-updated { color: var(--text-secondary, #999); font-size: 0.9rem; margin-bottom: 3rem; }
+    .legal-page h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+    .legal-page h3 { font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .legal-page p, .legal-page li { line-height: 1.8; color: var(--text-secondary, #ccc); margin-bottom: 1rem; }
+    .legal-page ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+    .legal-page li { margin-bottom: 0.5rem; }
+    .legal-page a { color: var(--accent, #c9a96e); text-decoration: underline; }
+    .legal-page a:hover { opacity: 0.8; }
+    .legal-back { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: var(--text-secondary, #999); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+    .legal-back:hover { color: var(--text-primary, #fff); }
+    .legal-back svg { width: 18px; height: 18px; }
+  </style>
 </head>
 <body>
 
-  <!-- Scroll Progress Bar -->
-  <div class="scroll-progress" aria-hidden="true"></div>
-
-  <!-- Navigation -->
-  <nav class="nav is-scrolled" aria-label="Main navigation">
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav-inner">
       <div class="nav-left">
         <div class="lang-switcher">
           <button class="lang-btn is-active" data-lang-switch="fr" aria-label="Français">FR</button>
           <button class="lang-btn" data-lang-switch="en" aria-label="English">EN</button>
         </div>
+        <a href="tel:5147672254" class="nav-phone">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-i18n="nav.phone">514 767 2254</span>
+        </a>
       </div>
+
       <a href="index.html" class="nav-wordmark">SUD OUEST</a>
+
       <div class="nav-actions-desktop">
-        <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-booking" target="_blank" rel="noopener noreferrer" data-i18n="nav.booking" data-i18n-href="booking.url">PRENDRE RENDEZ-VOUS</a>
+        <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-booking magnetic" target="_blank" rel="noopener noreferrer" data-i18n="nav.booking" data-i18n-href="booking.url">PRENDRE RENDEZ-VOUS</a>
       </div>
+
       <div class="nav-actions-mobile">
-        <a href="index.html" style="color: var(--white); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;" data-i18n="footer.link_home">Accueil</a>
+        <a href="index.html" class="btn-booking" style="font-size: 0.75rem; padding: 0.5rem 1rem;" data-i18n="legal.back_home">ACCUEIL</a>
       </div>
     </div>
   </nav>
 
-  <!-- Policy Content -->
-  <main class="policy-page">
+  <main class="legal-page">
     <div class="container">
-      <a href="index.html" class="policy-back">
+
+      <a href="index.html" class="legal-back" data-i18n="legal.back_link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-        <span data-i18n="policy.back">Retour à l'accueil</span>
+        Retour à l'accueil
       </a>
 
-      <h1 data-i18n="cookies.title">Politique relative aux cookies</h1>
+      <h1 data-i18n="cookies.page_title">Politique relative aux cookies</h1>
+      <p class="legal-updated" data-i18n="cookies.last_updated">Dernière mise à jour : 13 mars 2026</p>
 
-      <p><em data-i18n="cookies.effective">Date d'entrée en vigueur : 7 novembre 2024 — Dernière mise à jour : 7 novembre 2024</em></p>
+      <!-- Section 1 -->
+      <h2 data-i18n="cookies.what_title">Qu'est-ce qu'un cookie ?</h2>
+      <p data-i18n="cookies.what_text">Un cookie est un petit fichier texte déposé sur votre appareil (ordinateur, tablette ou téléphone intelligent) lorsque vous visitez un site Web. Les cookies permettent au site de reconnaître votre appareil et de mémoriser certaines informations relatives à votre visite, telles que vos préférences linguistiques ou votre consentement aux cookies.</p>
 
-      <h2 data-i18n="cookies.what_title">Que sont les cookies ?</h2>
-      <p data-i18n="cookies.what_desc">Les cookies sont de petits fichiers texte stockés sur votre appareil lorsque vous visitez un site web. Ils permettent au site de fonctionner correctement, d'améliorer la sécurité, d'offrir une meilleure expérience utilisateur et d'analyser la performance du site.</p>
-
-      <h2 data-i18n="cookies.how_title">Comment utilisons-nous les cookies ?</h2>
-      <p data-i18n="cookies.how_desc">Notre site web utilise des cookies de première partie et des cookies de tiers. Les cookies de première partie sont nécessaires au bon fonctionnement du site et ne collectent aucune donnée personnelle identifiable. Les cookies tiers servent principalement à comprendre comment le site fonctionne et comment vous interagissez avec celui-ci.</p>
-
+      <!-- Section 2 -->
       <h2 data-i18n="cookies.types_title">Types de cookies que nous utilisons</h2>
 
-      <h2 data-i18n="cookies.necessary_title">Cookies nécessaires</h2>
-      <p data-i18n="cookies.necessary_desc">Ces cookies sont essentiels au fonctionnement de base du site. Sans eux, certaines fonctionnalités ne seraient pas disponibles. Ils ne stockent aucune donnée personnelle identifiable.</p>
+      <h3 data-i18n="cookies.essential_title">Cookies essentiels</h3>
+      <p data-i18n="cookies.essential_text">Ces cookies sont nécessaires au bon fonctionnement du site Web. Ils vous permettent de naviguer sur le site et d'utiliser ses fonctionnalités de base. Ces cookies ne recueillent aucune information à des fins de marketing. Ils comprennent notamment :</p>
       <ul>
-        <li data-i18n="cookies.necessary_1"><strong>Préférences de langue</strong> — Mémorise votre choix de langue (français ou anglais) pour les visites ultérieures. Durée : 1 an.</li>
-        <li data-i18n="cookies.necessary_2"><strong>Consentement aux cookies</strong> — Enregistre vos préférences de consentement afin de les respecter lors de vos prochaines visites. Durée : 1 an.</li>
+        <li data-i18n="cookies.essential_item1">Cookie de consentement : mémorise votre choix concernant l'utilisation des cookies (durée : 1 an)</li>
+        <li data-i18n="cookies.essential_item2">Préférence de langue : enregistre votre choix entre le français et l'anglais (durée : 1 an)</li>
       </ul>
 
-      <h2 data-i18n="cookies.functional_title">Cookies fonctionnels</h2>
-      <p data-i18n="cookies.functional_desc">Ces cookies permettent des fonctionnalités améliorées et une personnalisation de votre expérience sur le site.</p>
+      <h3 data-i18n="cookies.analytics_title">Cookies analytiques</h3>
+      <p data-i18n="cookies.analytics_text">Nous utilisons Plausible Analytics, un outil d'analyse respectueux de la vie privée. Plausible ne dépose aucun cookie sur votre appareil et ne recueille aucune donnée personnelle. Les statistiques recueillies sont entièrement anonymes et agrégées, conformément à la Loi 25 du Québec et au Règlement général sur la protection des données (RGPD).</p>
 
-      <h2 data-i18n="cookies.analytics_title">Cookies analytiques</h2>
-      <p data-i18n="cookies.analytics_desc">Ces cookies nous aident à comprendre comment les visiteurs interagissent avec le site en collectant des données anonymes sur les pages visitées, la durée des visites et les sources de trafic.</p>
+      <h3 data-i18n="cookies.preferences_title">Cookies de préférences</h3>
+      <p data-i18n="cookies.preferences_text">Ces cookies permettent au site de mémoriser vos choix (comme la langue d'affichage) afin de vous offrir une expérience plus personnalisée et adaptée à vos préférences. Ces cookies ne sont pas utilisés à des fins publicitaires.</p>
 
-      <h2 data-i18n="cookies.manage_title">Gérer vos préférences</h2>
-      <p data-i18n="cookies.manage_desc">Vous pouvez modifier vos préférences en matière de cookies à tout moment. De plus, la plupart des navigateurs web vous permettent de contrôler les cookies via leurs paramètres. Voici comment gérer les cookies dans les principaux navigateurs :</p>
+      <!-- Section 3 -->
+      <h2 data-i18n="cookies.manage_title">Comment gérer les cookies</h2>
+      <p data-i18n="cookies.manage_text1">Lors de votre première visite sur notre site, une bannière de consentement vous permet d'accepter ou de refuser les cookies non essentiels. Vous pouvez modifier votre choix à tout moment en supprimant les cookies de votre navigateur.</p>
+      <p data-i18n="cookies.manage_text2">La plupart des navigateurs vous permettent de contrôler les cookies dans leurs paramètres. Vous pouvez généralement configurer votre navigateur pour qu'il refuse tous les cookies ou qu'il vous avertisse lorsqu'un cookie est envoyé. Veuillez noter que la désactivation de certains cookies peut affecter le fonctionnement du site.</p>
+      <p data-i18n="cookies.manage_text3">Pour en savoir plus sur la gestion des cookies dans votre navigateur :</p>
       <ul>
-        <li><strong>Chrome</strong> — Paramètres > Confidentialité et sécurité > Cookies</li>
-        <li><strong>Safari</strong> — Préférences > Confidentialité > Gestion des données de sites web</li>
-        <li><strong>Firefox</strong> — Paramètres > Vie privée et sécurité > Cookies et données de sites</li>
-        <li><strong>Edge</strong> — Paramètres > Cookies et autorisations de sites</li>
+        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+        <li><a href="https://support.mozilla.org/fr/kb/cookies-informations-sites-enregistrent" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+        <li><a href="https://support.apple.com/fr-ca/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a></li>
+        <li><a href="https://support.microsoft.com/fr-fr/microsoft-edge/supprimer-les-cookies-dans-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer">Microsoft Edge</a></li>
       </ul>
 
-      <h2 data-i18n="cookies.contact_title">Questions ?</h2>
-      <p data-i18n="cookies.contact_desc">Si vous avez des questions concernant notre utilisation des cookies, n'hésitez pas à nous contacter :</p>
-      <p>
-        Clinique Dentaire Sud Ouest<br>
-        1825 Avenue de l'Église, Montréal, QC, H4E 1G9<br>
-        <a href="mailto:info@sudouestdentaire.ca">info@sudouestdentaire.ca</a><br>
-        <a href="tel:5147672254">514 767 2254</a>
-      </p>
+      <!-- Section 4 -->
+      <h2 data-i18n="cookies.contact_title">Nous contacter</h2>
+      <p data-i18n="cookies.contact_text">Si vous avez des questions concernant notre utilisation des cookies, veuillez nous contacter :</p>
+      <ul>
+        <li><strong data-i18n="cookies.contact_clinic">Clinique Dentaire Sud Ouest</strong></li>
+        <li>1825 Avenue de l'Église, H4E 1G9, Montréal</li>
+        <li data-i18n="cookies.contact_email_label">Courriel : <a href="mailto:info@sudouestdentaire.ca">info@sudouestdentaire.ca</a></li>
+        <li data-i18n="cookies.contact_phone_label">Téléphone : <a href="tel:5147672254">514 767 2254</a></li>
+      </ul>
 
-      <p data-i18n-html="cookies.also_see">Consultez également notre <a href="confidentialite.html">Politique de confidentialité</a> pour en savoir plus sur la protection de vos données personnelles.</p>
+      <p data-i18n-html="cookies.privacy_link_text">Pour en savoir plus sur la manière dont nous protégeons vos renseignements personnels, veuillez consulter notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+
     </div>
   </main>
 
-  <!-- Footer -->
+  <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-bottom" style="margin-top: 0; border-top: none;">
-        <p data-i18n="footer.copyright">© 2026 Clinique Dentaire Sud Ouest. Tous droits réservés.</p>
+      <div class="footer-top">
+        <div class="footer-wordmark">SO</div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-i18n="footer.nav_title">Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html" data-i18n="footer.link_home">Accueil</a>
+            <a href="index.html#services" data-i18n="footer.link_general">Dentisterie Générale</a>
+            <a href="index.html#cosmetic" data-i18n="footer.link_cosmetic">Dentisterie Cosmétique</a>
+            <a href="index.html#team" data-i18n="footer.link_team">Notre Équipe</a>
+            <a href="index.html#contact" data-i18n="footer.link_contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.info_title">Informations</h4>
+          <div class="footer-info">
+            <p data-i18n="contact.address_line1">1825 Avenue de l'Église</p>
+            <p data-i18n="contact.address_line2">H4E 1G9, Montréal</p>
+            <p><a href="tel:5147672254" data-i18n="contact.phone">514 767 2254</a></p>
+            <p><a href="mailto:info@sudouestdentaire.ca">info@sudouestdentaire.ca</a></p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.follow_title">Suivez-nous</h4>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/sudouestdentaire/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/sudouest_dentaire/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg class="icon-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle class="icon-dot" cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 Clinique Dentaire Sud Ouest. Tous droits réservés.</p>
         <div class="footer-legal">
           <a href="confidentialite.html" data-i18n="footer.link_privacy">Politique de confidentialité</a>
           <a href="cookies.html" data-i18n="footer.link_cookies">Politique relative aux cookies</a>
@@ -105,8 +182,8 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="js/i18n.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/main.js"></script>
+
 </body>
 </html>

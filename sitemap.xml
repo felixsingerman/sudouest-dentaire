@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
-    <loc>https://sudouestdentaire.com/</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sudouestdentaire.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sudouestdentaire.com/?lang=en"/>
-    <lastmod>2026-03-12</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://sudouestdentaire.com/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sudouestdentaire.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sudouestdentaire.com/index.html"/>
+    <lastmod>2026-03-13</lastmod>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://sudouestdentaire.com/confidentialite.html</loc>
-    <lastmod>2026-03-12</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+
   <url>
     <loc>https://sudouestdentaire.com/cookies.html</loc>
-    <lastmod>2026-03-12</lastmod>
-    <changefreq>yearly</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sudouestdentaire.com/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sudouestdentaire.com/cookies.html"/>
+    <lastmod>2026-03-13</lastmod>
     <priority>0.3</priority>
   </url>
+
+  <url>
+    <loc>https://sudouestdentaire.com/confidentialite.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sudouestdentaire.com/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sudouestdentaire.com/confidentialite.html"/>
+    <lastmod>2026-03-13</lastmod>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>

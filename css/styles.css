@@ -95,7 +95,8 @@ ul, ol {
 
 :focus-visible {
   outline: 2px solid var(--gold);
-  outline-offset: 2px;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(198, 166, 100, 0.15);
 }
 
 button:focus:not(:focus-visible),
@@ -111,11 +112,13 @@ a:focus:not(:focus-visible) {
   top: 0;
   left: 0;
   width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+  background-size: 200% 100%;
   z-index: 10000;
   transition: none;
   will-change: width;
+  box-shadow: 0 0 10px rgba(198, 166, 100, 0.5);
 }
 
 /* =====================
@@ -527,8 +530,13 @@ a:focus:not(:focus-visible) {
 
 .btn-primary:hover {
   background: var(--gold-light);
-  box-shadow: var(--shadow-glow);
-  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(198, 166, 100, 0.4);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 4px 16px rgba(198, 166, 100, 0.3);
 }
 
 .btn-ghost {
@@ -536,20 +544,22 @@ a:focus:not(:focus-visible) {
   align-items: center;
   padding: 16px 44px;
   background: transparent;
-  color: var(--text-muted-dark);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(198, 166, 100, 0.4);
   border-radius: var(--radius-pill);
   transition: all var(--transition-fast);
+  backdrop-filter: blur(4px);
 }
 
 .btn-ghost:hover {
   color: var(--white);
-  border-color: rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(198, 166, 100, 0.6);
+  background: rgba(198, 166, 100, 0.08);
+  box-shadow: 0 0 20px rgba(198, 166, 100, 0.1);
 }
 
 .scroll-indicator {
@@ -744,6 +754,7 @@ a:focus:not(:focus-visible) {
 }
 
 .section-image img,
+.section-image picture img,
 .section-image .image-placeholder {
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -1317,14 +1328,18 @@ a:focus:not(:focus-visible) {
   bottom: var(--space-lg);
   right: var(--space-lg);
   z-index: 900;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: var(--white);
-  color: var(--text);
+  background: linear-gradient(135deg, rgba(198, 166, 100, 0.15), rgba(198, 166, 100, 0.05));
+  border: 1px solid rgba(198, 166, 100, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--gold);
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border-light);
   cursor: pointer;
@@ -1861,10 +1876,24 @@ a:focus:not(:focus-visible) {
   background: var(--warm-gray);
   border: none;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all 0.3s ease;
   padding: 10px;
   background-clip: content-box;
   box-sizing: content-box;
+}
+
+.testimonial-dot.is-active {
+  width: 32px;
+  border-radius: var(--radius-pill);
+  background: var(--gold);
+  background-clip: content-box;
+  box-shadow: 0 0 12px rgba(198, 166, 100, 0.3);
+}
+
+.testimonial-dot:hover:not(.is-active) {
+  background: var(--gold-muted);
+  background-clip: content-box;
+  transform: scale(1.2);
 }
 
 .testimonial-dot.is-active {
@@ -1904,17 +1933,19 @@ a:focus:not(:focus-visible) {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-md);
-  padding: var(--space-lg) 0;
+  padding: var(--space-lg) var(--space-sm);
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text);
   text-align: left;
   cursor: pointer;
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast), background var(--transition-fast);
+  border-radius: var(--radius-sm);
 }
 
 .faq-question:hover {
   color: var(--gold);
+  background: rgba(198, 166, 100, 0.04);
 }
 
 .faq-question svg {

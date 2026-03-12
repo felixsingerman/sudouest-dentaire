@@ -1,17 +1,36 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" translate="no">
 <head>
   <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 — Page introuvable | Clinique Dentaire Sud Ouest</title>
   <meta name="description" content="La page que vous cherchez n'existe pas ou a été déplacée.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+  <meta name="theme-color" content="#0c0c0c">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css?v=4">
+  <link rel="stylesheet" href="css/styles.css?v=4">
+  <link rel="stylesheet" href="css/animations.css?v=4">
+  <link rel="stylesheet" href="css/responsive.css?v=4">
+
   <style>
+    body {
+      background: var(--black, #0c0c0c);
+      margin: 0;
+    }
     .error-page {
       min-height: 100vh;
       display: flex;
@@ -21,21 +40,22 @@
       text-align: center;
       padding: 2rem;
     }
-    .error-code {
+    .error-wordmark {
       font-family: 'Playfair Display', serif;
       font-style: italic;
-      font-size: clamp(6rem, 15vw, 12rem);
+      font-size: clamp(4rem, 12vw, 8rem);
       font-weight: 400;
-      color: var(--gold);
+      color: var(--gold, #c8a86e);
       line-height: 1;
-      margin-bottom: 1rem;
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.04em;
     }
     .error-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(1.5rem, 3vw, 2.25rem);
       font-weight: 400;
-      color: var(--white);
-      margin-bottom: 1rem;
+      color: var(--white, #fff);
+      margin: 0 0 1rem;
     }
     .error-subtitle {
       font-family: 'Inter', sans-serif;
@@ -44,7 +64,7 @@
       color: var(--text-secondary, rgba(255,255,255,0.6));
       max-width: 28rem;
       line-height: 1.6;
-      margin-bottom: 2.5rem;
+      margin: 0 0 2.5rem;
     }
     .error-btn {
       display: inline-block;
@@ -55,7 +75,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--black, #0c0c0c);
-      background: var(--gold);
+      background: var(--gold, #c8a86e);
       border: none;
       border-radius: 0;
       text-decoration: none;
@@ -68,44 +88,13 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav is-scrolled" aria-label="Main navigation">
-    <div class="nav-inner">
-      <div class="nav-left">
-        <div class="lang-switcher">
-          <button class="lang-btn is-active" data-lang-switch="fr" aria-label="Français">FR</button>
-          <button class="lang-btn" data-lang-switch="en" aria-label="English">EN</button>
-        </div>
-      </div>
-      <a href="index.html" class="nav-wordmark">SUD OUEST</a>
-      <div class="nav-actions-desktop">
-        <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-booking" target="_blank" rel="noopener noreferrer" data-i18n="nav.booking" data-i18n-href="booking.url">PRENDRE RENDEZ-VOUS</a>
-      </div>
-      <div class="nav-actions-mobile">
-        <a href="index.html" style="color: var(--white); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;" data-i18n="footer.link_home">Accueil</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- 404 Content -->
   <main class="error-page">
-    <p class="error-code">404</p>
+    <div class="error-wordmark">SO</div>
     <h1 class="error-title" data-i18n="error.title">Page introuvable</h1>
     <p class="error-subtitle" data-i18n="error.subtitle">La page que vous cherchez n'existe pas ou a été déplacée.</p>
     <a href="index.html" class="error-btn" data-i18n="error.back">Retour à l'accueil</a>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-bottom" style="margin-top: 0; border-top: none;">
-        <p data-i18n="footer.copyright">© 2026 Clinique Dentaire Sud Ouest. Tous droits réservés.</p>
-      </div>
-    </div>
-  </footer>
-
   <script src="js/i18n.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html>
