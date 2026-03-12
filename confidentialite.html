@@ -1,115 +1,215 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" translate="no">
 <head>
   <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Politique de confidentialité | Clinique Dentaire Sud Ouest</title>
-  <meta name="description" content="Politique de confidentialité de la Clinique Dentaire Sud Ouest à Montréal.">
+  <meta name="description" content="Politique de confidentialité de la Clinique Dentaire Sud Ouest. Découvrez comment nous recueillons, utilisons et protégeons vos renseignements personnels.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0c0c0c">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css?v=4">
+  <link rel="stylesheet" href="css/styles.css?v=4">
+  <link rel="stylesheet" href="css/animations.css?v=4">
+  <link rel="stylesheet" href="css/responsive.css?v=4">
+
+  <style>
+    .legal-page { padding: 8rem 0 4rem; min-height: 100vh; }
+    .legal-page .container { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+    .legal-page h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem; }
+    .legal-page .legal-updated { color: var(--text-secondary, #999); font-size: 0.9rem; margin-bottom: 3rem; }
+    .legal-page h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+    .legal-page h3 { font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .legal-page p, .legal-page li { line-height: 1.8; color: var(--text-secondary, #ccc); margin-bottom: 1rem; }
+    .legal-page ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+    .legal-page li { margin-bottom: 0.5rem; }
+    .legal-page a { color: var(--accent, #c9a96e); text-decoration: underline; }
+    .legal-page a:hover { opacity: 0.8; }
+    .legal-back { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: var(--text-secondary, #999); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+    .legal-back:hover { color: var(--text-primary, #fff); }
+    .legal-back svg { width: 18px; height: 18px; }
+  </style>
 </head>
 <body>
 
-  <!-- Scroll Progress Bar -->
-  <div class="scroll-progress" aria-hidden="true"></div>
-
-  <!-- Navigation -->
-  <nav class="nav is-scrolled" aria-label="Main navigation">
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav-inner">
       <div class="nav-left">
         <div class="lang-switcher">
           <button class="lang-btn is-active" data-lang-switch="fr" aria-label="Français">FR</button>
           <button class="lang-btn" data-lang-switch="en" aria-label="English">EN</button>
         </div>
+        <a href="tel:5147672254" class="nav-phone">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-i18n="nav.phone">514 767 2254</span>
+        </a>
       </div>
+
       <a href="index.html" class="nav-wordmark">SUD OUEST</a>
+
       <div class="nav-actions-desktop">
-        <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-booking" target="_blank" rel="noopener noreferrer" data-i18n="nav.booking" data-i18n-href="booking.url">PRENDRE RENDEZ-VOUS</a>
+        <a href="https://www.docclik.com/fr/clinic/12142/booking" class="btn-booking magnetic" target="_blank" rel="noopener noreferrer" data-i18n="nav.booking" data-i18n-href="booking.url">PRENDRE RENDEZ-VOUS</a>
       </div>
+
       <div class="nav-actions-mobile">
-        <a href="index.html" style="color: var(--white); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;" data-i18n="footer.link_home">Accueil</a>
+        <a href="index.html" class="btn-booking" style="font-size: 0.75rem; padding: 0.5rem 1rem;" data-i18n="legal.back_home">ACCUEIL</a>
       </div>
     </div>
   </nav>
 
-  <!-- Policy Content -->
-  <main class="policy-page">
+  <main class="legal-page">
     <div class="container">
-      <a href="index.html" class="policy-back">
+
+      <a href="index.html" class="legal-back" data-i18n="legal.back_link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-        <span data-i18n="policy.back">Retour à l'accueil</span>
+        Retour à l'accueil
       </a>
 
-      <h1 data-i18n="privacy.title">Politique de confidentialité</h1>
+      <h1 data-i18n="privacy.page_title">Politique de confidentialité</h1>
+      <p class="legal-updated" data-i18n="privacy.last_updated">Dernière mise à jour : 13 mars 2026</p>
 
-      <p><em data-i18n="privacy.effective">Date d'entrée en vigueur : 6 novembre 2024 — Dernière mise à jour : 6 novembre 2024</em></p>
+      <p data-i18n="privacy.intro">La Clinique Dentaire Sud Ouest s'engage à protéger les renseignements personnels de ses patients et des visiteurs de son site Web, conformément à la Loi 25 sur la protection des renseignements personnels dans le secteur privé du Québec. La présente politique décrit les renseignements que nous recueillons, la manière dont nous les utilisons et les mesures que nous prenons pour les protéger.</p>
 
-      <p data-i18n-html="privacy.intro">La présente politique de confidentialité décrit les politiques de la Clinique Dentaire Sud Ouest, située au 1825 Avenue de l'Église, Montréal, QC, H4E 1G9, Canada (courriel : <a href="mailto:info@sudouestdentaire.ca">info@sudouestdentaire.ca</a>, téléphone : 514 767 2254), concernant la collecte, l'utilisation et la divulgation de vos informations lorsque vous utilisez notre site Web (le « Service »).</p>
+      <!-- Section 1: Information collected -->
+      <h2 data-i18n="privacy.collected_title">Renseignements recueillis</h2>
+      <p data-i18n="privacy.collected_intro">Dans le cadre de l'exploitation de notre site Web, nous pouvons recueillir les renseignements suivants :</p>
 
-      <p data-i18n="privacy.consent">En accédant ou en utilisant le Service, vous consentez à la collecte, à l'utilisation et à la divulgation de vos informations conformément à la présente politique de confidentialité. Si vous n'y consentez pas, veuillez ne pas accéder au Service ni l'utiliser.</p>
-
-      <p data-i18n="privacy.changes">Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment, sans préavis, et publierons la politique révisée sur le Service. La politique révisée sera effective 180 jours après sa publication. Votre accès continu ou votre utilisation du Service après ce délai constituera votre acceptation de la politique révisée.</p>
-
-      <h2 data-i18n="privacy.info_title">Informations que nous collectons</h2>
-      <p data-i18n="privacy.info_desc">Lorsque vous utilisez notre Service, nous pouvons collecter les types d'informations suivants :</p>
+      <h3 data-i18n="privacy.collected_form_title">Renseignements fournis volontairement</h3>
       <ul>
-        <li data-i18n="privacy.info_1">Informations que vous nous fournissez directement (nom, courriel, numéro de téléphone) via notre formulaire de contact</li>
-        <li data-i18n="privacy.info_2">Informations techniques collectées automatiquement (adresse IP, type de navigateur, pages visitées)</li>
-        <li data-i18n-html="privacy.info_3">Informations collectées via les cookies et technologies similaires (voir notre <a href="cookies.html">Politique relative aux cookies</a>)</li>
+        <li data-i18n="privacy.collected_form_item1">Nom, adresse courriel et message, lorsque vous utilisez notre formulaire de contact</li>
+        <li data-i18n="privacy.collected_form_item2">Numéro de téléphone, si vous choisissez de nous appeler ou de nous contacter par WhatsApp</li>
       </ul>
 
-      <h2 data-i18n="privacy.use_title">Utilisation de vos informations</h2>
-      <p data-i18n="privacy.use_desc">Nous utiliserons les informations que nous collectons à votre sujet aux fins suivantes :</p>
+      <h3 data-i18n="privacy.collected_auto_title">Renseignements recueillis automatiquement</h3>
       <ul>
-        <li data-i18n="privacy.use_1">Répondre à vos demandes et communications</li>
-        <li data-i18n="privacy.use_2">Améliorer et optimiser notre site Web</li>
-        <li data-i18n="privacy.use_3">Assurer la sécurité et le bon fonctionnement du Service</li>
-        <li data-i18n="privacy.use_4">Respecter nos obligations légales</li>
+        <li data-i18n="privacy.collected_auto_item1">Données de navigation anonymes et agrégées (pages consultées, durée de la visite, pays d'origine) recueillies par Plausible Analytics, sans recours à des cookies ni à des données personnelles</li>
+        <li data-i18n="privacy.collected_auto_item2">Préférence de langue (français ou anglais), enregistrée localement sur votre appareil</li>
+        <li data-i18n="privacy.collected_auto_item3">Consentement aux cookies, enregistré localement sur votre appareil</li>
       </ul>
-      <p data-i18n="privacy.use_consent">Si nous souhaitons utiliser vos informations à d'autres fins, nous vous demanderons votre consentement préalable et n'utiliserons vos informations qu'après l'avoir obtenu, sauf si la loi nous oblige à agir autrement.</p>
 
-      <h2 data-i18n="privacy.rights_title">Vos droits</h2>
-      <p data-i18n="privacy.rights_desc">Selon les lois applicables, notamment la Loi 25 du Québec et la Loi sur la protection des renseignements personnels, vous pouvez avoir le droit de :</p>
+      <!-- Section 2: How we use it -->
+      <h2 data-i18n="privacy.use_title">Utilisation des renseignements</h2>
+      <p data-i18n="privacy.use_intro">Les renseignements recueillis sont utilisés aux fins suivantes :</p>
       <ul>
-        <li data-i18n="privacy.rights_1">Accéder à vos données personnelles et en obtenir une copie</li>
-        <li data-i18n="privacy.rights_2">Rectifier ou effacer vos données personnelles</li>
-        <li data-i18n="privacy.rights_3">Restreindre ou vous opposer au traitement de vos données</li>
-        <li data-i18n="privacy.rights_4">Demander le transfert (portabilité) de vos données à une autre entité</li>
-        <li data-i18n="privacy.rights_5">Retirer tout consentement que vous nous avez donné</li>
-        <li data-i18n="privacy.rights_6">Déposer une plainte auprès de la Commission d'accès à l'information du Québec</li>
+        <li data-i18n="privacy.use_item1">Répondre à vos demandes de renseignements ou de rendez-vous envoyées par le formulaire de contact</li>
+        <li data-i18n="privacy.use_item2">Améliorer le contenu et la performance de notre site Web grâce à des données analytiques anonymes</li>
+        <li data-i18n="privacy.use_item3">Mémoriser vos préférences de navigation (langue, consentement aux cookies)</li>
+        <li data-i18n="privacy.use_item4">Respecter nos obligations légales et réglementaires</li>
       </ul>
-      <p data-i18n-html="privacy.rights_contact">Pour exercer ces droits, vous pouvez nous écrire à <a href="mailto:info@sudouestdentaire.ca">info@sudouestdentaire.ca</a>. Nous répondrons à votre demande conformément à la loi applicable.</p>
 
-      <h2 data-i18n="privacy.security_title">Sécurité</h2>
-      <p data-i18n="privacy.security_desc">La sécurité de vos informations est importante pour nous. Nous mettons en œuvre des mesures de sécurité raisonnables pour prévenir la perte, l'utilisation abusive ou la modification non autorisée de vos informations. Toutefois, aucune transmission de données sur Internet n'est totalement sécurisée, et nous ne pouvons garantir une sécurité absolue.</p>
+      <!-- Section 3: Third parties -->
+      <h2 data-i18n="privacy.thirdparty_title">Services tiers</h2>
+      <p data-i18n="privacy.thirdparty_intro">Notre site Web fait appel aux services tiers suivants. Chacun de ces services a été choisi pour son respect de la vie privée :</p>
 
-      <h2 data-i18n="privacy.third_title">Liens de tiers</h2>
-      <p data-i18n="privacy.third_desc">Notre Service peut contenir des liens vers d'autres sites web qui ne sont pas exploités par nous (notamment DocClik pour la prise de rendez-vous). Cette politique de confidentialité ne s'applique pas aux pratiques de confidentialité de tiers. Nous vous conseillons de consulter la politique de confidentialité de chaque site que vous visitez.</p>
+      <h3>Plausible Analytics</h3>
+      <p data-i18n="privacy.thirdparty_plausible">Nous utilisons Plausible Analytics pour mesurer la fréquentation de notre site. Plausible est un outil d'analyse respectueux de la vie privée qui ne dépose aucun cookie, ne recueille aucune donnée personnelle et n'effectue aucun suivi individuel. Toutes les données sont anonymes et agrégées. Pour en savoir plus : <a href="https://plausible.io/data-policy" target="_blank" rel="noopener noreferrer">plausible.io/data-policy</a>.</p>
 
-      <h2 data-i18n="privacy.cookies_title">Cookies</h2>
-      <p data-i18n-html="privacy.cookies_desc">Pour en savoir plus sur notre utilisation des cookies et technologies de suivi, veuillez consulter notre <a href="cookies.html">Politique relative aux cookies</a>.</p>
+      <h3>Google Maps</h3>
+      <p data-i18n="privacy.thirdparty_maps">Notre site intègre une carte Google Maps pour vous aider à localiser notre clinique. L'utilisation de Google Maps est soumise aux <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">règles de confidentialité de Google</a>. Google peut recueillir certaines données techniques lorsque la carte est affichée.</p>
 
-      <h2 data-i18n="privacy.contact_title">Responsable de la protection des données</h2>
-      <p data-i18n="privacy.contact_desc">Si vous avez des questions ou des préoccupations concernant le traitement de vos informations, vous pouvez contacter notre responsable à :</p>
-      <p>
-        Clinique Dentaire Sud Ouest<br>
-        1825 Avenue de l'Église, Montréal, QC, H4E 1G9<br>
-        <a href="mailto:info@sudouestdentaire.ca">info@sudouestdentaire.ca</a><br>
-        <a href="tel:5147672254">514 767 2254</a>
-      </p>
+      <h3>Formspree</h3>
+      <p data-i18n="privacy.thirdparty_formspree">Notre formulaire de contact utilise le service Formspree pour la transmission sécurisée de vos messages. Les renseignements que vous soumettez (nom, courriel, message) transitent par les serveurs de Formspree. Pour en savoir plus : <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer">formspree.io/legal/privacy-policy</a>.</p>
+
+      <!-- Section 4: Rights under Quebec Law 25 -->
+      <h2 data-i18n="privacy.rights_title">Vos droits en vertu de la Loi 25 du Québec</h2>
+      <p data-i18n="privacy.rights_intro">Conformément à la Loi modernisant des dispositions législatives en matière de protection des renseignements personnels (Loi 25), vous disposez des droits suivants :</p>
+      <ul>
+        <li data-i18n="privacy.rights_item1"><strong>Droit d'accès :</strong> Vous pouvez demander à consulter les renseignements personnels que nous détenons à votre sujet.</li>
+        <li data-i18n="privacy.rights_item2"><strong>Droit de rectification :</strong> Vous pouvez demander la correction de renseignements inexacts ou incomplets.</li>
+        <li data-i18n="privacy.rights_item3"><strong>Droit de retrait du consentement :</strong> Vous pouvez retirer votre consentement à la collecte ou à l'utilisation de vos renseignements personnels à tout moment.</li>
+        <li data-i18n="privacy.rights_item4"><strong>Droit à la suppression :</strong> Vous pouvez demander la suppression de vos renseignements personnels lorsque ceux-ci ne sont plus nécessaires aux fins pour lesquelles ils ont été recueillis.</li>
+        <li data-i18n="privacy.rights_item5"><strong>Droit à la portabilité :</strong> Vous pouvez demander à recevoir vos renseignements personnels dans un format technologique structuré et couramment utilisé.</li>
+      </ul>
+      <p data-i18n="privacy.rights_exercise">Pour exercer l'un de ces droits, veuillez nous contacter aux coordonnées indiquées ci-dessous. Nous traiterons votre demande dans un délai de 30 jours.</p>
+
+      <!-- Section 5: Data retention -->
+      <h2 data-i18n="privacy.retention_title">Conservation des données</h2>
+      <p data-i18n="privacy.retention_text1">Les messages envoyés par le formulaire de contact sont conservés uniquement le temps nécessaire pour répondre à votre demande, sauf obligation légale contraire.</p>
+      <p data-i18n="privacy.retention_text2">Les données analytiques de Plausible sont anonymes et agrégées dès leur collecte. Elles ne permettent en aucun cas d'identifier un visiteur individuel.</p>
+      <p data-i18n="privacy.retention_text3">Les préférences enregistrées sur votre appareil (langue, consentement aux cookies) sont conservées pendant une durée maximale d'un an, ou jusqu'à ce que vous effaciez les données de votre navigateur.</p>
+
+      <!-- Section 6: Security -->
+      <h2 data-i18n="privacy.security_title">Sécurité des données</h2>
+      <p data-i18n="privacy.security_text">Nous mettons en place des mesures de sécurité techniques et organisationnelles appropriées pour protéger vos renseignements personnels contre tout accès non autorisé, toute modification, divulgation ou destruction. Notre site Web utilise le protocole HTTPS pour chiffrer les communications entre votre navigateur et nos serveurs.</p>
+
+      <!-- Section 7: Changes -->
+      <h2 data-i18n="privacy.changes_title">Modifications de cette politique</h2>
+      <p data-i18n="privacy.changes_text">Nous nous réservons le droit de modifier la présente politique de confidentialité à tout moment. Toute modification sera publiée sur cette page avec une date de mise à jour révisée. Nous vous encourageons à consulter cette page régulièrement.</p>
+
+      <!-- Section 8: Contact -->
+      <h2 data-i18n="privacy.contact_title">Nous contacter</h2>
+      <p data-i18n="privacy.contact_intro">Si vous avez des questions concernant la présente politique de confidentialité ou si vous souhaitez exercer vos droits, veuillez communiquer avec notre responsable de la protection des renseignements personnels :</p>
+      <ul>
+        <li><strong>Clinique Dentaire Sud Ouest</strong></li>
+        <li>1825 Avenue de l'Église, H4E 1G9, Montréal</li>
+        <li data-i18n="privacy.contact_email_label">Courriel : <a href="mailto:info@sudouestdentaire.ca">info@sudouestdentaire.ca</a></li>
+        <li data-i18n="privacy.contact_phone_label">Téléphone : <a href="tel:5147672254">514 767 2254</a></li>
+      </ul>
+
+      <p data-i18n-html="privacy.cookies_link_text">Pour en savoir plus sur les cookies utilisés sur notre site, veuillez consulter notre <a href="cookies.html">politique relative aux cookies</a>.</p>
+
     </div>
   </main>
 
-  <!-- Footer -->
+  <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-bottom" style="margin-top: 0; border-top: none;">
-        <p data-i18n="footer.copyright">© 2026 Clinique Dentaire Sud Ouest. Tous droits réservés.</p>
+      <div class="footer-top">
+        <div class="footer-wordmark">SO</div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-i18n="footer.nav_title">Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html" data-i18n="footer.link_home">Accueil</a>
+            <a href="index.html#services" data-i18n="footer.link_general">Dentisterie Générale</a>
+            <a href="index.html#cosmetic" data-i18n="footer.link_cosmetic">Dentisterie Cosmétique</a>
+            <a href="index.html#team" data-i18n="footer.link_team">Notre Équipe</a>
+            <a href="index.html#contact" data-i18n="footer.link_contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.info_title">Informations</h4>
+          <div class="footer-info">
+            <p data-i18n="contact.address_line1">1825 Avenue de l'Église</p>
+            <p data-i18n="contact.address_line2">H4E 1G9, Montréal</p>
+            <p><a href="tel:5147672254" data-i18n="contact.phone">514 767 2254</a></p>
+            <p><a href="mailto:info@sudouestdentaire.ca">info@sudouestdentaire.ca</a></p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.follow_title">Suivez-nous</h4>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/sudouestdentaire/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/sudouest_dentaire/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg class="icon-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle class="icon-dot" cx="17.5" cy="6.5" r="1.5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 Clinique Dentaire Sud Ouest. Tous droits réservés.</p>
         <div class="footer-legal">
           <a href="confidentialite.html" data-i18n="footer.link_privacy">Politique de confidentialité</a>
           <a href="cookies.html" data-i18n="footer.link_cookies">Politique relative aux cookies</a>
@@ -118,8 +218,8 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="js/i18n.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/main.js"></script>
+
 </body>
 </html>
